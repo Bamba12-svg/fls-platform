@@ -1,0 +1,51 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": [
+    "DATABASE_URL",
+    "NEXTAUTH_SECRET",
+    "NEXTAUTH_URL",
+    "ADMIN_URL",
+    "ADMIN_SECRET",
+    "NEXT_PUBLIC_SITE_URL",
+    "CLOUDINARY_URL",
+    "MEDIA_DIR",
+    "PRIVATE_DIR",
+    "WEB_PUBLIC_DIR",
+    "DATA_SOURCE",
+    "DEMO_STATE_FILE",
+    "SHOW_DEMO_ACCOUNTS"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build",
+        "^generate"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "dist/**"
+      ]
+    },
+    "generate": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": [
+        "^generate"
+      ]
+    },
+    "lint": {},
+    "typecheck": {
+      "dependsOn": [
+        "^generate"
+      ]
+    },
+    "test": {}
+  },
+  "globalDependencies": [
+    ".env"
+  ]
+}

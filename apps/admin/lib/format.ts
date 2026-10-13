@@ -1,0 +1,10 @@
+import { formatMoney } from '@fls/core';
+export const money = (x: number) => formatMoney(x, 'fr');
+export const dt = (iso: string | null | undefined, time = false) => (iso ? new Date(iso).toLocaleString('fr-FR', time ? { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' } : { day: '2-digit', month: '2-digit', year: 'numeric' }) : '—');
+export const SEGMENTS = { GROSSISTE: 'Grossiste', DEMI_GROSSISTE: 'Demi-grossiste', CHR: 'Restauration (CHR)', B2C: 'Particulier (B2C)' } as const;
+export const ORDER_STATUS = { RECEIVED: 'Reçue', PREPARING: 'En préparation', SHIPPED: 'Expédiée', DELIVERED: 'Livrée', CANCELLED: 'Annulée' } as const;
+export const LEAD_TYPES = { ACCOUNT: 'Ouverture de compte', QUOTE: 'Devis', TURNKEY: 'Clés en main', ADVICE: 'Accompagnement', KEY_ACCOUNT: 'Grand compte', CONTACT: 'Contact', APPLICATION: 'Candidature', NEWSLETTER: 'Newsletter' } as const;
+export const LEAD_STATUS = { NEW: 'Nouveau', IN_PROGRESS: 'En cours', DONE: 'Traité', ARCHIVED: 'Archivé' } as const;
+export const ACCOUNT_STATUS = { PENDING: 'En attente', APPROVED: 'Validé', REJECTED: 'Refusé', SUSPENDED: 'Suspendu' } as const;
+export const NEWS_CATS = { gammes: 'Nouvelles gammes', salons: 'Salons & événements', arrivages: 'Arrivages', societe: 'Vie de l’entreprise', conseil: 'Conseils métier' } as const;
+export const ALLERGENS = { gluten: 'Gluten', lait: 'Lait', oeuf: 'Œuf', poisson: 'Poisson', crustaces: 'Crustacés', moutarde: 'Moutarde', celeri: 'Céleri', soja: 'Soja', arachide: 'Arachide', fruits_coque: 'Fruits à coque', sesame: 'Sésame', sulfites: 'Sulfites', lupin: 'Lupin', mollusques: 'Mollusques' } as const;

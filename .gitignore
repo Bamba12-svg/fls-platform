@@ -1,0 +1,12 @@
+node_modules
+.next
+dist
+.turbo
+.env
+.env.local
+*.log
+apps/web/public/uploads/*
+!apps/web/public/uploads/.gitkeep
+storage/
+*.tsbuildinfo
+next-env.d.ts.bak

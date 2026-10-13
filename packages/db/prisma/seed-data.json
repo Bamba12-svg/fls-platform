@@ -1,0 +1,2043 @@
+{
+ "universes": [
+  {
+   "slug": "boissons",
+   "img": "u-boissons",
+   "n": {
+    "fr": "Boissons",
+    "en": "Beverages"
+   },
+   "d": {
+    "fr": "Sodas, jus, eaux et sirops en canettes, PET et briques, livrés par carton ou par palette.",
+    "en": "Soft drinks, juices, water and syrups in cans, PET and cartons, delivered by case or pallet."
+   },
+   "vol": {
+    "v": "3,2 M+",
+    "fr": "cols distribués par an",
+    "en": "units distributed per year"
+   },
+   "brands": [
+    [
+     "Uludag",
+     1
+    ],
+    [
+     "Serene",
+     0
+    ],
+    [
+     "Enjoy",
+     0
+    ],
+    [
+     "Source Téranga",
+     0
+    ]
+   ],
+   "subs": [
+    [
+     "sodas",
+     {
+      "fr": "Sodas",
+      "en": "Soft drinks"
+     }
+    ],
+    [
+     "jus",
+     {
+      "fr": "Jus & nectars",
+      "en": "Juices & nectars"
+     }
+    ],
+    [
+     "eaux",
+     {
+      "fr": "Eaux",
+      "en": "Water"
+     }
+    ],
+    [
+     "sirops",
+     {
+      "fr": "Sirops",
+      "en": "Syrups"
+     }
+    ]
+   ]
+  },
+  {
+   "slug": "epicerie",
+   "img": "u-epicerie",
+   "n": {
+    "fr": "Épicerie sèche",
+    "en": "Dry groceries"
+   },
+   "d": {
+    "fr": "Riz, huiles, farines, sucre, pâtes et lait en poudre : les fondamentaux du commerce de gros, plus les emballages CHR.",
+    "en": "Rice, oils, flour, sugar, pasta and milk powder: wholesale staples, plus food-service packaging."
+   },
+   "vol": {
+    "v": "2 500+ t",
+    "fr": "distribuées par an",
+    "en": "distributed per year"
+   },
+   "brands": [
+    [
+     "Riz du Fleuve",
+     0
+    ],
+    [
+     "Oléa Pro",
+     0
+    ],
+    [
+     "Sahel Farine",
+     0
+    ],
+    [
+     "Pastella",
+     0
+    ]
+   ],
+   "subs": [
+    [
+     "snacks",
+     {
+      "fr": "Snacks",
+      "en": "Snacks"
+     }
+    ],
+    [
+     "huiles",
+     {
+      "fr": "Huiles",
+      "en": "Oils"
+     }
+    ],
+    [
+     "riz",
+     {
+      "fr": "Riz & farines",
+      "en": "Rice & flour"
+     }
+    ],
+    [
+     "pates",
+     {
+      "fr": "Pâtes",
+      "en": "Pasta"
+     }
+    ],
+    [
+     "sucre",
+     {
+      "fr": "Sucre & lait",
+      "en": "Sugar & milk"
+     }
+    ],
+    [
+     "emballages",
+     {
+      "fr": "Emballages CHR",
+      "en": "Food-service packaging"
+     }
+    ]
+   ]
+  },
+  {
+   "slug": "frais",
+   "img": "u-frais",
+   "n": {
+    "fr": "Produits frais",
+    "en": "Fresh products"
+   },
+   "d": {
+    "fr": "Produits laitiers, fromages et charcuterie halal conservés et livrés entre 0 et 4 °C.",
+    "en": "Dairy, cheese and halal cold cuts stored and delivered between 0 and 4 °C."
+   },
+   "vol": {
+    "v": "0–4 °C",
+    "fr": "chaîne du froid suivie jusqu’à la livraison",
+    "en": "cold chain monitored to delivery"
+   },
+   "brands": [
+    [
+     "Laiterie du Cap",
+     0
+    ],
+    [
+     "Alpéa",
+     0
+    ],
+    [
+     "Halal Délices",
+     0
+    ]
+   ],
+   "subs": [
+    [
+     "laitiers",
+     {
+      "fr": "Produits laitiers",
+      "en": "Dairy"
+     }
+    ],
+    [
+     "fromages",
+     {
+      "fr": "Fromages",
+      "en": "Cheese"
+     }
+    ],
+    [
+     "charcuterie",
+     {
+      "fr": "Charcuterie halal",
+      "en": "Halal cold cuts"
+     }
+    ]
+   ]
+  },
+  {
+   "slug": "surgeles",
+   "img": "u-surgeles",
+   "n": {
+    "fr": "Produits surgelés",
+    "en": "Frozen products"
+   },
+   "d": {
+    "fr": "Frites, volailles, viandes et produits de la mer à −18 °C, pensés pour la restauration rapide et les cantines.",
+    "en": "Fries, poultry, meat and seafood at −18 °C, built for quick-service restaurants and canteens."
+   },
+   "vol": {
+    "v": "900+ t",
+    "fr": "de surgelés livrés par an",
+    "en": "of frozen goods delivered per year"
+   },
+   "brands": [
+    [
+     "Crousti Pro",
+     0
+    ],
+    [
+     "Volaille d’Or",
+     0
+    ],
+    [
+     "Mer de Joal",
+     0
+    ]
+   ],
+   "subs": [
+    [
+     "frites",
+     {
+      "fr": "Frites & snacking",
+      "en": "Fries & snacks"
+     }
+    ],
+    [
+     "volaille",
+     {
+      "fr": "Volaille & viandes",
+      "en": "Poultry & meat"
+     }
+    ],
+    [
+     "mer",
+     {
+      "fr": "Produits de la mer",
+      "en": "Seafood"
+     }
+    ]
+   ]
+  },
+  {
+   "slug": "conserves",
+   "img": "u-conserves",
+   "n": {
+    "fr": "Conserves & condiments",
+    "en": "Canned goods & condiments"
+   },
+   "d": {
+    "fr": "Tomate, légumes, poisson en conserve, sauces et assaisonnements en formats ménagers et professionnels.",
+    "en": "Tomato, vegetables, canned fish, sauces and seasonings in retail and catering sizes."
+   },
+   "vol": {
+    "v": "1,1 M+",
+    "fr": "boîtes et seaux par an",
+    "en": "cans and tubs per year"
+   },
+   "brands": [
+    [
+     "Maria",
+     1
+    ],
+    [
+     "Tomatissimo",
+     0
+    ],
+    [
+     "Mer de Joal",
+     0
+    ],
+    [
+     "Saveur d’Or",
+     0
+    ]
+   ],
+   "subs": [
+    [
+     "tomate",
+     {
+      "fr": "Tomate",
+      "en": "Tomato"
+     }
+    ],
+    [
+     "legumes",
+     {
+      "fr": "Légumes",
+      "en": "Vegetables"
+     }
+    ],
+    [
+     "poisson",
+     {
+      "fr": "Poisson",
+      "en": "Fish"
+     }
+    ],
+    [
+     "sauces",
+     {
+      "fr": "Sauces & assaisonnements",
+      "en": "Sauces & seasoning"
+     }
+    ]
+   ]
+  }
+ ],
+ "products": [
+  {
+   "code": "UL-033",
+   "slug": "uludag-gazoz-33cl",
+   "nameFr": "Uludag Gazoz 33 cl",
+   "nameEn": "Uludag Gazoz 33 cl",
+   "brand": "Uludag",
+   "universe": "boissons",
+   "sub": "sodas",
+   "packFr": "Carton 24 × 33 cl canette",
+   "packEn": "Case 24 × 33 cl can",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8400,
+   "stock": 640,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Turquie",
+   "vis": "uludag"
+  },
+  {
+   "code": "UL-100",
+   "slug": "uludag-gazoz-1l",
+   "nameFr": "Uludag Gazoz 1 L",
+   "nameEn": "Uludag Gazoz 1 L",
+   "brand": "Uludag",
+   "universe": "boissons",
+   "sub": "sodas",
+   "packFr": "Carton 12 × 1 L PET",
+   "packEn": "Case 12 × 1 L PET",
+   "upc": 12,
+   "cpp": 70,
+   "base": 7800,
+   "stock": 410,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Turquie",
+   "vis": "uludag"
+  },
+  {
+   "code": "UL-O33",
+   "slug": "uludag-orange-33cl",
+   "nameFr": "Uludag Orange 33 cl",
+   "nameEn": "Uludag Orange 33 cl",
+   "brand": "Uludag",
+   "universe": "boissons",
+   "sub": "sodas",
+   "packFr": "Carton 24 × 33 cl canette",
+   "packEn": "Case 24 × 33 cl can",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8900,
+   "stock": 96,
+   "flag": "new",
+   "sectors": [
+    "ff",
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Turquie",
+   "vis": "uludag"
+  },
+  {
+   "code": "UL-C33",
+   "slug": "uludag-cola-33cl",
+   "nameFr": "Uludag Cola 33 cl",
+   "nameEn": "Uludag Cola 33 cl",
+   "brand": "Uludag",
+   "universe": "boissons",
+   "sub": "sodas",
+   "packFr": "Carton 24 × 33 cl canette",
+   "packEn": "Case 24 × 33 cl can",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8400,
+   "stock": 280,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Turquie",
+   "vis": "uludag"
+  },
+  {
+   "code": "EJ-JO1",
+   "slug": "jus-orange-enjoy",
+   "nameFr": "Jus d’orange Enjoy 1 L",
+   "nameEn": "Enjoy orange juice 1 L",
+   "brand": "Enjoy",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 12 × 1 L brique",
+   "packEn": "Case 12 × 1 L carton",
+   "upc": 12,
+   "cpp": 60,
+   "base": 9600,
+   "stock": 520,
+   "flag": "",
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Importé",
+   "vis": "enjoy"
+  },
+  {
+   "code": "EJ-JM1",
+   "slug": "nectar-mangue-enjoy",
+   "nameFr": "Nectar de mangue Enjoy 1 L",
+   "nameEn": "Enjoy mango nectar 1 L",
+   "brand": "Enjoy",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 12 × 1 L brique",
+   "packEn": "Case 12 × 1 L carton",
+   "upc": 12,
+   "cpp": 60,
+   "base": 9900,
+   "stock": 300,
+   "flag": "deal",
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Importé",
+   "vis": "enjoy"
+  },
+  {
+   "code": "EJ-JA20",
+   "slug": "jus-ananas-enjoy-20cl",
+   "nameFr": "Jus d’ananas Enjoy 20 cl",
+   "nameEn": "Enjoy pineapple juice 20 cl",
+   "brand": "Enjoy",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 27 × 20 cl brique",
+   "packEn": "Case 27 × 20 cl carton",
+   "upc": 27,
+   "cpp": 90,
+   "base": 6750,
+   "stock": 0,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Importé",
+   "vis": "enjoy"
+  },
+  {
+   "code": "SR-AN33",
+   "slug": "serene-ananas-33cl",
+   "nameFr": "Boisson Serene ananas 33 cl",
+   "nameEn": "Serene pineapple drink 33 cl",
+   "brand": "Serene",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 24 × 33 cl canette",
+   "packEn": "Case 24 × 33 cl can",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8100,
+   "stock": 350,
+   "flag": "new",
+   "sectors": [
+    "ff",
+    "su",
+    "re"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Importé",
+   "vis": "serene"
+  },
+  {
+   "code": "SR-TR33",
+   "slug": "serene-tropical-33cl",
+   "nameFr": "Boisson Serene tropical 33 cl",
+   "nameEn": "Serene tropical drink 33 cl",
+   "brand": "Serene",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 24 × 33 cl canette",
+   "packEn": "Case 24 × 33 cl can",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8100,
+   "stock": 190,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "su",
+    "re"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Importé",
+   "vis": "serene"
+  },
+  {
+   "code": "EA-150",
+   "slug": "eau-source-teranga-1-5l",
+   "nameFr": "Eau minérale Source Téranga 1,5 L",
+   "nameEn": "Source Téranga mineral water 1.5 L",
+   "brand": "Source Téranga",
+   "universe": "boissons",
+   "sub": "eaux",
+   "packFr": "Pack 6 × 1,5 L",
+   "packEn": "Pack 6 × 1.5 L",
+   "upc": 6,
+   "cpp": 100,
+   "base": 1800,
+   "stock": 2200,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "ea-150"
+  },
+  {
+   "code": "EA-050",
+   "slug": "eau-source-teranga-50cl",
+   "nameFr": "Eau minérale Source Téranga 50 cl",
+   "nameEn": "Source Téranga mineral water 50 cl",
+   "brand": "Source Téranga",
+   "universe": "boissons",
+   "sub": "eaux",
+   "packFr": "Pack 12 × 50 cl",
+   "packEn": "Pack 12 × 50 cl",
+   "upc": 12,
+   "cpp": 120,
+   "base": 2100,
+   "stock": 1800,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "ea-050"
+  },
+  {
+   "code": "SI-BI75",
+   "slug": "sirop-bissap-baobab-gold",
+   "nameFr": "Sirop de bissap Baobab Gold 75 cl",
+   "nameEn": "Baobab Gold hibiscus syrup 75 cl",
+   "brand": "Baobab Gold",
+   "universe": "boissons",
+   "sub": "sirops",
+   "packFr": "Carton 6 × 75 cl verre",
+   "packEn": "Case 6 × 75 cl glass",
+   "upc": 6,
+   "cpp": 120,
+   "base": 7200,
+   "stock": 180,
+   "flag": "new",
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "si-bi75"
+  },
+  {
+   "code": "SN-CH24",
+   "slug": "barres-chocolatees-presentoir",
+   "nameFr": "Barres chocolatées, présentoir de 24",
+   "nameEn": "Chocolate bars, display of 24",
+   "brand": "Snack",
+   "universe": "epicerie",
+   "sub": "snacks",
+   "packFr": "Carton 6 présentoirs × 24",
+   "packEn": "Case 6 displays × 24",
+   "upc": 6,
+   "cpp": 60,
+   "base": 28800,
+   "stock": 140,
+   "flag": "deal",
+   "sectors": [
+    "su",
+    "ff"
+   ],
+   "allergens": [
+    "lait",
+    "soja"
+   ],
+   "halal": true,
+   "origin": "Importé",
+   "vis": "snack"
+  },
+  {
+   "code": "HU-T20",
+   "slug": "huile-friture-olea-pro-20l",
+   "nameFr": "Huile de friture Oléa Pro 20 L",
+   "nameEn": "Oléa Pro frying oil 20 L",
+   "brand": "Oléa Pro",
+   "universe": "epicerie",
+   "sub": "huiles",
+   "packFr": "Bidon 20 L",
+   "packEn": "20 L drum",
+   "upc": 1,
+   "cpp": 48,
+   "base": 24500,
+   "stock": 210,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Malaisie",
+   "vis": "hu-t20"
+  },
+  {
+   "code": "HU-T05",
+   "slug": "huile-vegetale-olea-pro-5l",
+   "nameFr": "Huile végétale Oléa Pro 5 L",
+   "nameEn": "Oléa Pro vegetable oil 5 L",
+   "brand": "Oléa Pro",
+   "universe": "epicerie",
+   "sub": "huiles",
+   "packFr": "Carton 4 × 5 L",
+   "packEn": "Case 4 × 5 L",
+   "upc": 4,
+   "cpp": 60,
+   "base": 27600,
+   "stock": 340,
+   "flag": "deal",
+   "sectors": [
+    "re",
+    "su",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Malaisie",
+   "vis": "hu-t05"
+  },
+  {
+   "code": "RZ-BR50",
+   "slug": "riz-brise-parfume-50kg",
+   "nameFr": "Riz brisé parfumé 50 kg",
+   "nameEn": "Fragrant broken rice 50 kg",
+   "brand": "Riz du Fleuve",
+   "universe": "epicerie",
+   "sub": "riz",
+   "packFr": "Sac 50 kg",
+   "packEn": "50 kg bag",
+   "upc": 1,
+   "cpp": 40,
+   "base": 19500,
+   "stock": 1200,
+   "flag": "",
+   "sectors": [
+    "re",
+    "su",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Sénégal (vallée du fleuve)",
+   "vis": "rz-br50"
+  },
+  {
+   "code": "RZ-LG25",
+   "slug": "riz-long-grain-25kg",
+   "nameFr": "Riz long grain 25 kg",
+   "nameEn": "Long-grain rice 25 kg",
+   "brand": "Riz du Fleuve",
+   "universe": "epicerie",
+   "sub": "riz",
+   "packFr": "Sac 25 kg",
+   "packEn": "25 kg bag",
+   "upc": 1,
+   "cpp": 80,
+   "base": 12500,
+   "stock": 760,
+   "flag": "",
+   "sectors": [
+    "re",
+    "su",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Sénégal (vallée du fleuve)",
+   "vis": "rz-lg25"
+  },
+  {
+   "code": "FA-T55",
+   "slug": "farine-ble-t55-50kg",
+   "nameFr": "Farine de blé T55 50 kg",
+   "nameEn": "Wheat flour T55 50 kg",
+   "brand": "Sahel Farine",
+   "universe": "epicerie",
+   "sub": "riz",
+   "packFr": "Sac 50 kg",
+   "packEn": "50 kg bag",
+   "upc": 1,
+   "cpp": 40,
+   "base": 19800,
+   "stock": 430,
+   "flag": "",
+   "sectors": [
+    "gr",
+    "re"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "fa-t55"
+  },
+  {
+   "code": "PA-SP5",
+   "slug": "spaghetti-pastella-500g",
+   "nameFr": "Spaghetti Pastella 500 g",
+   "nameEn": "Pastella spaghetti 500 g",
+   "brand": "Pastella",
+   "universe": "epicerie",
+   "sub": "pates",
+   "packFr": "Carton 20 × 500 g",
+   "packEn": "Case 20 × 500 g",
+   "upc": 20,
+   "cpp": 80,
+   "base": 7400,
+   "stock": 610,
+   "flag": "",
+   "sectors": [
+    "su",
+    "gr",
+    "re"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "halal": true,
+   "origin": "Turquie",
+   "vis": "pa-sp5"
+  },
+  {
+   "code": "PA-MC5",
+   "slug": "macaroni-pastella-500g",
+   "nameFr": "Macaroni Pastella 500 g",
+   "nameEn": "Pastella macaroni 500 g",
+   "brand": "Pastella",
+   "universe": "epicerie",
+   "sub": "pates",
+   "packFr": "Carton 20 × 500 g",
+   "packEn": "Case 20 × 500 g",
+   "upc": 20,
+   "cpp": 80,
+   "base": 7400,
+   "stock": 240,
+   "flag": "",
+   "sectors": [
+    "su",
+    "gr"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "halal": true,
+   "origin": "Turquie",
+   "vis": "pa-mc5"
+  },
+  {
+   "code": "SU-PO50",
+   "slug": "sucre-poudre-50kg",
+   "nameFr": "Sucre en poudre 50 kg",
+   "nameEn": "Granulated sugar 50 kg",
+   "brand": "Doux Sahel",
+   "universe": "epicerie",
+   "sub": "sucre",
+   "packFr": "Sac 50 kg",
+   "packEn": "50 kg bag",
+   "upc": 1,
+   "cpp": 40,
+   "base": 28500,
+   "stock": 520,
+   "flag": "",
+   "sectors": [
+    "su",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "su-po50"
+  },
+  {
+   "code": "LA-P400",
+   "slug": "lait-poudre-lacta-plus-400g",
+   "nameFr": "Lait en poudre Lacta Plus 400 g",
+   "nameEn": "Lacta Plus milk powder 400 g",
+   "brand": "Lacta Plus",
+   "universe": "epicerie",
+   "sub": "sucre",
+   "packFr": "Carton 24 × 400 g",
+   "packEn": "Case 24 × 400 g",
+   "upc": 24,
+   "cpp": 50,
+   "base": 46800,
+   "stock": 38,
+   "flag": "",
+   "sectors": [
+    "su",
+    "gr"
+   ],
+   "allergens": [
+    "lait"
+   ],
+   "halal": true,
+   "origin": "Pays-Bas",
+   "vis": "la-p400"
+  },
+  {
+   "code": "EM-B500",
+   "slug": "barquettes-kraft-500ml",
+   "nameFr": "Barquettes kraft 500 ml",
+   "nameEn": "Kraft food boxes 500 ml",
+   "brand": "FLS Pro",
+   "universe": "epicerie",
+   "sub": "emballages",
+   "packFr": "Carton 300 unités",
+   "packEn": "Case 300 units",
+   "upc": 300,
+   "cpp": 40,
+   "base": 18900,
+   "stock": 150,
+   "flag": "new",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [],
+   "halal": false,
+   "origin": "Turquie",
+   "vis": "em-b500"
+  },
+  {
+   "code": "EM-G25",
+   "slug": "gobelets-carton-25cl",
+   "nameFr": "Gobelets carton 25 cl",
+   "nameEn": "Paper cups 25 cl",
+   "brand": "FLS Pro",
+   "universe": "epicerie",
+   "sub": "emballages",
+   "packFr": "Carton 1 000 unités",
+   "packEn": "Case 1,000 units",
+   "upc": 1000,
+   "cpp": 30,
+   "base": 22000,
+   "stock": 90,
+   "flag": "",
+   "sectors": [
+    "ff"
+   ],
+   "allergens": [],
+   "halal": false,
+   "origin": "Turquie",
+   "vis": "em-g25"
+  },
+  {
+   "code": "EM-SK",
+   "slug": "sacs-kraft-poignees",
+   "nameFr": "Sacs kraft à poignées",
+   "nameEn": "Kraft bags with handles",
+   "brand": "FLS Pro",
+   "universe": "epicerie",
+   "sub": "emballages",
+   "packFr": "Carton 250 unités",
+   "packEn": "Case 250 units",
+   "upc": 250,
+   "cpp": 40,
+   "base": 15500,
+   "stock": 120,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "su"
+   ],
+   "allergens": [],
+   "halal": false,
+   "origin": "Turquie",
+   "vis": "em-sk"
+  },
+  {
+   "code": "FR-YS5",
+   "slug": "yaourt-sucre-laiterie-du-cap-500g",
+   "nameFr": "Yaourt sucré Laiterie du Cap 500 g",
+   "nameEn": "Laiterie du Cap sweet yogurt 500 g",
+   "brand": "Laiterie du Cap",
+   "universe": "frais",
+   "sub": "laitiers",
+   "packFr": "Carton 12 × 500 g",
+   "packEn": "Case 12 × 500 g",
+   "upc": 12,
+   "cpp": 80,
+   "base": 10800,
+   "stock": 260,
+   "flag": "",
+   "sectors": [
+    "su",
+    "re"
+   ],
+   "allergens": [
+    "lait"
+   ],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "fr-ys5"
+  },
+  {
+   "code": "FR-CR1",
+   "slug": "creme-fraiche-1l",
+   "nameFr": "Crème fraîche épaisse 1 L",
+   "nameEn": "Thick crème fraîche 1 L",
+   "brand": "Laiterie du Cap",
+   "universe": "frais",
+   "sub": "laitiers",
+   "packFr": "Carton 6 × 1 L",
+   "packEn": "Case 6 × 1 L",
+   "upc": 6,
+   "cpp": 90,
+   "base": 21000,
+   "stock": 85,
+   "flag": "",
+   "sectors": [
+    "re"
+   ],
+   "allergens": [
+    "lait"
+   ],
+   "halal": true,
+   "origin": "France",
+   "vis": "fr-cr1"
+  },
+  {
+   "code": "FR-EM1",
+   "slug": "emmental-rape-alpea-1kg",
+   "nameFr": "Emmental râpé Alpéa 1 kg",
+   "nameEn": "Alpéa grated emmental 1 kg",
+   "brand": "Alpéa",
+   "universe": "frais",
+   "sub": "fromages",
+   "packFr": "Carton 6 × 1 kg",
+   "packEn": "Case 6 × 1 kg",
+   "upc": 6,
+   "cpp": 80,
+   "base": 45000,
+   "stock": 140,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [
+    "lait"
+   ],
+   "halal": true,
+   "origin": "France",
+   "vis": "fr-em1"
+  },
+  {
+   "code": "FR-MZ25",
+   "slug": "mozzarella-pizza-alpea-2-5kg",
+   "nameFr": "Mozzarella pizza Alpéa 2,5 kg",
+   "nameEn": "Alpéa pizza mozzarella 2.5 kg",
+   "brand": "Alpéa",
+   "universe": "frais",
+   "sub": "fromages",
+   "packFr": "Carton 4 × 2,5 kg",
+   "packEn": "Case 4 × 2.5 kg",
+   "upc": 4,
+   "cpp": 70,
+   "base": 60000,
+   "stock": 64,
+   "flag": "new",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [
+    "lait"
+   ],
+   "halal": true,
+   "origin": "Italie",
+   "vis": "fr-mz25"
+  },
+  {
+   "code": "FR-CH1",
+   "slug": "cheddar-tranches-alpea",
+   "nameFr": "Cheddar en tranches Alpéa 1 kg",
+   "nameEn": "Alpéa sliced cheddar 1 kg",
+   "brand": "Alpéa",
+   "universe": "frais",
+   "sub": "fromages",
+   "packFr": "Carton 8 × 1 kg (84 tranches)",
+   "packEn": "Case 8 × 1 kg (84 slices)",
+   "upc": 8,
+   "cpp": 70,
+   "base": 52000,
+   "stock": 110,
+   "flag": "",
+   "sectors": [
+    "ff"
+   ],
+   "allergens": [
+    "lait"
+   ],
+   "halal": true,
+   "origin": "Irlande",
+   "vis": "fr-ch1"
+  },
+  {
+   "code": "FR-BD25",
+   "slug": "beurre-doux-250g",
+   "nameFr": "Beurre doux 250 g",
+   "nameEn": "Unsalted butter 250 g",
+   "brand": "Laiterie du Cap",
+   "universe": "frais",
+   "sub": "laitiers",
+   "packFr": "Carton 40 × 250 g",
+   "packEn": "Case 40 × 250 g",
+   "upc": 40,
+   "cpp": 60,
+   "base": 60000,
+   "stock": 72,
+   "flag": "",
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "allergens": [
+    "lait"
+   ],
+   "halal": true,
+   "origin": "France",
+   "vis": "fr-bd25"
+  },
+  {
+   "code": "FR-DF1",
+   "slug": "dinde-fumee-halal-tranches",
+   "nameFr": "Dinde fumée halal en tranches 1 kg",
+   "nameEn": "Halal smoked turkey slices 1 kg",
+   "brand": "Halal Délices",
+   "universe": "frais",
+   "sub": "charcuterie",
+   "packFr": "Carton 6 × 1 kg",
+   "packEn": "Case 6 × 1 kg",
+   "upc": 6,
+   "cpp": 80,
+   "base": 45000,
+   "stock": 48,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "France",
+   "vis": "fr-df1"
+  },
+  {
+   "code": "SG-F09",
+   "slug": "frites-9mm-crousti-pro",
+   "nameFr": "Frites 9 mm Crousti Pro 2,5 kg",
+   "nameEn": "Crousti Pro 9 mm fries 2.5 kg",
+   "brand": "Crousti Pro",
+   "universe": "surgeles",
+   "sub": "frites",
+   "packFr": "Carton 4 × 2,5 kg",
+   "packEn": "Case 4 × 2.5 kg",
+   "upc": 4,
+   "cpp": 96,
+   "base": 16000,
+   "stock": 380,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Belgique",
+   "vis": "sg-f09"
+  },
+  {
+   "code": "SG-F13",
+   "slug": "frites-steakhouse-13mm",
+   "nameFr": "Frites steakhouse 13 mm 2,5 kg",
+   "nameEn": "Steakhouse fries 13 mm 2.5 kg",
+   "brand": "Crousti Pro",
+   "universe": "surgeles",
+   "sub": "frites",
+   "packFr": "Carton 4 × 2,5 kg",
+   "packEn": "Case 4 × 2.5 kg",
+   "upc": 4,
+   "cpp": 96,
+   "base": 16800,
+   "stock": 170,
+   "flag": "deal",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Belgique",
+   "vis": "sg-f13"
+  },
+  {
+   "code": "SG-NG1",
+   "slug": "nuggets-poulet-halal-1kg",
+   "nameFr": "Nuggets de poulet halal 1 kg",
+   "nameEn": "Halal chicken nuggets 1 kg",
+   "brand": "Volaille d’Or",
+   "universe": "surgeles",
+   "sub": "frites",
+   "packFr": "Carton 6 × 1 kg",
+   "packEn": "Case 6 × 1 kg",
+   "upc": 6,
+   "cpp": 80,
+   "base": 25200,
+   "stock": 220,
+   "flag": "",
+   "sectors": [
+    "ff"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "halal": true,
+   "origin": "Brésil",
+   "vis": "sg-ng1"
+  },
+  {
+   "code": "SG-CP10",
+   "slug": "cuisses-poulet-10kg",
+   "nameFr": "Cuisses de poulet 10 kg",
+   "nameEn": "Chicken legs 10 kg",
+   "brand": "Volaille d’Or",
+   "universe": "surgeles",
+   "sub": "volaille",
+   "packFr": "Carton 10 kg",
+   "packEn": "10 kg case",
+   "upc": 1,
+   "cpp": 90,
+   "base": 17500,
+   "stock": 530,
+   "flag": "",
+   "sectors": [
+    "re",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Brésil",
+   "vis": "sg-cp10"
+  },
+  {
+   "code": "SG-SH15",
+   "slug": "steaks-haches-100g",
+   "nameFr": "Steaks hachés 15 % MG 100 g",
+   "nameEn": "Beef patties 15 % fat 100 g",
+   "brand": "Volaille d’Or",
+   "universe": "surgeles",
+   "sub": "volaille",
+   "packFr": "Carton 50 × 100 g",
+   "packEn": "Case 50 × 100 g",
+   "upc": 50,
+   "cpp": 80,
+   "base": 26000,
+   "stock": 95,
+   "flag": "",
+   "sectors": [
+    "ff"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Brésil",
+   "vis": "sg-sh15"
+  },
+  {
+   "code": "SG-TH10",
+   "slug": "thiof-entier-iqf-10kg",
+   "nameFr": "Thiof entier IQF 10 kg",
+   "nameEn": "Whole white grouper IQF 10 kg",
+   "brand": "Mer de Joal",
+   "universe": "surgeles",
+   "sub": "mer",
+   "packFr": "Carton 10 kg",
+   "packEn": "10 kg case",
+   "upc": 1,
+   "cpp": 70,
+   "base": 55000,
+   "stock": 26,
+   "flag": "new",
+   "sectors": [
+    "re"
+   ],
+   "allergens": [
+    "poisson"
+   ],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "sg-th10"
+  },
+  {
+   "code": "SG-CR1",
+   "slug": "crevettes-decortiquees-1kg",
+   "nameFr": "Crevettes décortiquées 1 kg",
+   "nameEn": "Peeled shrimp 1 kg",
+   "brand": "Mer de Joal",
+   "universe": "surgeles",
+   "sub": "mer",
+   "packFr": "Carton 10 × 1 kg",
+   "packEn": "Case 10 × 1 kg",
+   "upc": 10,
+   "cpp": 60,
+   "base": 85000,
+   "stock": 40,
+   "flag": "",
+   "sectors": [
+    "re"
+   ],
+   "allergens": [
+    "crustaces"
+   ],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "sg-cr1"
+  },
+  {
+   "code": "CO-TC22",
+   "slug": "concentre-tomate-2-2kg",
+   "nameFr": "Concentré de tomate 2,2 kg",
+   "nameEn": "Tomato paste 2.2 kg",
+   "brand": "Tomatissimo",
+   "universe": "conserves",
+   "sub": "tomate",
+   "packFr": "Carton 6 × 2,2 kg",
+   "packEn": "Case 6 × 2.2 kg",
+   "upc": 6,
+   "cpp": 80,
+   "base": 19800,
+   "stock": 450,
+   "flag": "",
+   "sectors": [
+    "re",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Italie",
+   "vis": "co-tc22"
+  },
+  {
+   "code": "CO-TC07",
+   "slug": "concentre-tomate-70g",
+   "nameFr": "Concentré de tomate 70 g",
+   "nameEn": "Tomato paste 70 g",
+   "brand": "Tomatissimo",
+   "universe": "conserves",
+   "sub": "tomate",
+   "packFr": "Carton 50 × 70 g",
+   "packEn": "Case 50 × 70 g",
+   "upc": 50,
+   "cpp": 100,
+   "base": 9800,
+   "stock": 900,
+   "flag": "deal",
+   "sectors": [
+    "su",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Italie",
+   "vis": "co-tc07"
+  },
+  {
+   "code": "CO-PP8",
+   "slug": "petits-pois-maria-4-4",
+   "nameFr": "Petits pois extra-fins Maria 4/4",
+   "nameEn": "Maria extra-fine peas 4/4",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "legumes",
+   "packFr": "Carton 12 × 800 g",
+   "packEn": "Case 12 × 800 g",
+   "upc": 12,
+   "cpp": 100,
+   "base": 9600,
+   "stock": 310,
+   "flag": "",
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "peas"
+  },
+  {
+   "code": "CO-MD3",
+   "slug": "mais-doux-maria-3-1",
+   "nameFr": "Maïs doux Maria 3/1",
+   "nameEn": "Maria sweet corn 3/1",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "legumes",
+   "packFr": "Carton 6 × 2,1 kg",
+   "packEn": "Case 6 × 2.1 kg",
+   "upc": 6,
+   "cpp": 90,
+   "base": 13200,
+   "stock": 140,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "corn"
+  },
+  {
+   "code": "CO-OL9",
+   "slug": "olives-vertes-maria",
+   "nameFr": "Olives vertes dénoyautées Maria",
+   "nameEn": "Maria pitted green olives",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "legumes",
+   "packFr": "Carton 12 × 900 g bocal",
+   "packEn": "Case 12 × 900 g jar",
+   "upc": 12,
+   "cpp": 80,
+   "base": 21600,
+   "stock": 220,
+   "flag": "new",
+   "sectors": [
+    "re",
+    "ff",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "olives"
+  },
+  {
+   "code": "CO-MC8",
+   "slug": "macedoine-legumes-maria",
+   "nameFr": "Macédoine de légumes Maria 4/4",
+   "nameEn": "Maria mixed vegetables 4/4",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "legumes",
+   "packFr": "Carton 12 × 800 g",
+   "packEn": "Case 12 × 800 g",
+   "upc": 12,
+   "cpp": 100,
+   "base": 10200,
+   "stock": 330,
+   "flag": "",
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "macedoine"
+  },
+  {
+   "code": "CO-HB8",
+   "slug": "haricots-blancs-maria",
+   "nameFr": "Haricots blancs Maria 4/4",
+   "nameEn": "Maria white beans 4/4",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "legumes",
+   "packFr": "Carton 12 × 800 g",
+   "packEn": "Case 12 × 800 g",
+   "upc": 12,
+   "cpp": 100,
+   "base": 9400,
+   "stock": 270,
+   "flag": "",
+   "sectors": [
+    "re",
+    "su",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "beans"
+  },
+  {
+   "code": "CO-AN8",
+   "slug": "ananas-tranches-maria",
+   "nameFr": "Ananas en morceaux Maria 4/4",
+   "nameEn": "Maria pineapple pieces 4/4",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "legumes",
+   "packFr": "Carton 12 × 820 g",
+   "packEn": "Case 12 × 820 g",
+   "upc": 12,
+   "cpp": 100,
+   "base": 13800,
+   "stock": 150,
+   "flag": "",
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Thaïlande",
+   "vis": "pineapple"
+  },
+  {
+   "code": "CO-CN35",
+   "slug": "cornichons-extra-fins-maria",
+   "nameFr": "Cornichons extra-fins Maria 350 g",
+   "nameEn": "Maria extra-fine gherkins 350 g",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "legumes",
+   "packFr": "Carton 12 × 350 g bocal",
+   "packEn": "Case 12 × 350 g jar",
+   "upc": 12,
+   "cpp": 100,
+   "base": 14400,
+   "stock": 160,
+   "flag": "new",
+   "sectors": [
+    "re",
+    "ff",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "cornichons"
+  },
+  {
+   "code": "CO-OB36",
+   "slug": "petits-oignons-blancs-maria",
+   "nameFr": "Petits oignons blancs Maria 360 g",
+   "nameEn": "Maria small white onions 360 g",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "legumes",
+   "packFr": "Carton 12 × 360 g bocal",
+   "packEn": "Case 12 × 360 g jar",
+   "upc": 12,
+   "cpp": 100,
+   "base": 13200,
+   "stock": 90,
+   "flag": "",
+   "sectors": [
+    "re"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "oignons"
+  },
+  {
+   "code": "CO-HB4",
+   "slug": "haricots-blancs-maria-400g",
+   "nameFr": "Haricots blancs Maria 400 g",
+   "nameEn": "Maria white beans 400 g",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "legumes",
+   "packFr": "Carton 24 × 400 g",
+   "packEn": "Case 24 × 400 g",
+   "upc": 24,
+   "cpp": 100,
+   "base": 10800,
+   "stock": 300,
+   "flag": "",
+   "sectors": [
+    "su",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Italie",
+   "vis": "poischiches"
+  },
+  {
+   "code": "CO-SA12",
+   "slug": "sardines-huile-125g",
+   "nameFr": "Sardines à l’huile 125 g",
+   "nameEn": "Sardines in oil 125 g",
+   "brand": "Mer de Joal",
+   "universe": "conserves",
+   "sub": "poisson",
+   "packFr": "Carton 50 × 125 g",
+   "packEn": "Case 50 × 125 g",
+   "upc": 50,
+   "cpp": 60,
+   "base": 23500,
+   "stock": 380,
+   "flag": "",
+   "sectors": [
+    "su",
+    "gr"
+   ],
+   "allergens": [
+    "poisson"
+   ],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "co-sa12"
+  },
+  {
+   "code": "CO-TN17",
+   "slug": "thon-naturel-1-7kg",
+   "nameFr": "Thon au naturel 1,7 kg",
+   "nameEn": "Tuna in brine 1.7 kg",
+   "brand": "Mer de Joal",
+   "universe": "conserves",
+   "sub": "poisson",
+   "packFr": "Carton 6 × 1,7 kg",
+   "packEn": "Case 6 × 1.7 kg",
+   "upc": 6,
+   "cpp": 80,
+   "base": 45000,
+   "stock": 58,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [
+    "poisson"
+   ],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "co-tn17"
+  },
+  {
+   "code": "CO-MY5",
+   "slug": "mayonnaise-maria",
+   "nameFr": "Mayonnaise Maria",
+   "nameEn": "Maria mayonnaise",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "sauces",
+   "packFr": "Carton 2 × 5 L seau",
+   "packEn": "Case 2 × 5 L tub",
+   "upc": 2,
+   "cpp": 70,
+   "base": 22000,
+   "stock": 190,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [
+    "oeuf",
+    "moutarde"
+   ],
+   "halal": true,
+   "origin": "Turquie",
+   "vis": "mayo"
+  },
+  {
+   "code": "CO-KE5",
+   "slug": "ketchup-maria-5kg",
+   "nameFr": "Ketchup Maria 5 kg",
+   "nameEn": "Maria ketchup 5 kg",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "sauces",
+   "packFr": "Carton 2 × 5 kg seau",
+   "packEn": "Case 2 × 5 kg tub",
+   "upc": 2,
+   "cpp": 70,
+   "base": 17000,
+   "stock": 160,
+   "flag": "",
+   "sectors": [
+    "ff"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Turquie",
+   "vis": "ketchup"
+  },
+  {
+   "code": "CO-MO1",
+   "slug": "moutarde-maria",
+   "nameFr": "Moutarde Maria 1 kg",
+   "nameEn": "Maria mustard 1 kg",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "sauces",
+   "packFr": "Carton 6 × 1 kg",
+   "packEn": "Case 6 × 1 kg",
+   "upc": 6,
+   "cpp": 90,
+   "base": 8400,
+   "stock": 0,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [
+    "moutarde"
+   ],
+   "halal": true,
+   "origin": "France",
+   "vis": "moutarde"
+  },
+  {
+   "code": "CO-BC4",
+   "slug": "bouillon-saveur-or-400g",
+   "nameFr": "Bouillon cube Saveur d’Or 400 g",
+   "nameEn": "Saveur d’Or stock cubes 400 g",
+   "brand": "Saveur d’Or",
+   "universe": "conserves",
+   "sub": "sauces",
+   "packFr": "Carton 24 × 400 g",
+   "packEn": "Case 24 × 400 g",
+   "upc": 24,
+   "cpp": 60,
+   "base": 39000,
+   "stock": 700,
+   "flag": "",
+   "sectors": [
+    "su",
+    "gr",
+    "re"
+   ],
+   "allergens": [
+    "celeri"
+   ],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "co-bc4"
+  }
+ ],
+ "news": [
+  {
+   "slug": "uludag-frutti-arrive-a-dakar",
+   "cat": "arrivages",
+   "date": "2026-10-02",
+   "img": "n-arrivage",
+   "prod": "UL-O33",
+   "t": {
+    "fr": "La gamme Uludag Frutti arrive dans nos entrepôts",
+    "en": "The Uludag Frutti range lands in our warehouses"
+   },
+   "x": {
+    "fr": "Orange, pêche et cocktail en canette 33 cl : disponibles dès maintenant par carton de 24, avec un tarif de lancement pour les grossistes.",
+    "en": "Orange, peach and cocktail in 33 cl cans: available now in cases of 24, with a launch price for wholesalers."
+   }
+  },
+  {
+   "slug": "fls-au-fidak-2026",
+   "cat": "salons",
+   "date": "2026-09-25",
+   "img": "n-fidak",
+   "t": {
+    "fr": "FLS sera présente à la FIDAK 2026",
+    "en": "FLS will exhibit at FIDAK 2026"
+   },
+   "x": {
+    "fr": "Rendez-vous sur notre stand à la Foire internationale de Dakar pour découvrir les nouvelles gammes et rencontrer nos équipes commerciales.",
+    "en": "Visit our stand at the Dakar International Fair to discover new ranges and meet our sales teams."
+   }
+  },
+  {
+   "slug": "surgeles-restauration-rapide",
+   "cat": "gammes",
+   "date": "2026-09-12",
+   "img": "u-surgeles",
+   "prod": "SG-F13",
+   "t": {
+    "fr": "Une gamme surgelés pensée pour la restauration rapide",
+    "en": "A frozen range built for quick-service restaurants"
+   },
+   "x": {
+    "fr": "Frites steakhouse, nuggets halal et steaks hachés : des formats calibrés pour tenir vos coûts portion.",
+    "en": "Steakhouse fries, halal nuggets and beef patties: sizes calibrated to hold your portion costs."
+   }
+  },
+  {
+   "slug": "portail-commande-pro",
+   "cat": "societe",
+   "date": "2026-09-01",
+   "img": "n-portail",
+   "t": {
+    "fr": "Commandez en ligne 24 h/24 avec le portail pro",
+    "en": "Order online 24/7 with the pro portal"
+   },
+   "x": {
+    "fr": "Saisie par code article, prix selon votre grille, factures téléchargeables : le portail remplace progressivement les commandes par téléphone.",
+    "en": "Order by item code, prices from your grid, downloadable invoices: the portal gradually replaces phone orders."
+   }
+  },
+  {
+   "slug": "calculer-cout-matiere",
+   "cat": "conseil",
+   "date": "2026-08-20",
+   "img": "u-conseil",
+   "t": {
+    "fr": "Calculer le coût matière d’un menu fast-food",
+    "en": "Working out the food cost of a quick-service menu"
+   },
+   "x": {
+    "fr": "La méthode que nos conseillers utilisent avec les restaurateurs pour fixer un prix de vente rentable.",
+    "en": "The method our advisers use with restaurant owners to set a profitable selling price."
+   }
+  },
+  {
+   "slug": "flotte-frigorifique",
+   "cat": "societe",
+   "date": "2026-08-05",
+   "img": "n-camion",
+   "t": {
+    "fr": "Notre flotte frigorifique s’agrandit",
+    "en": "Our refrigerated fleet is growing"
+   },
+   "x": {
+    "fr": "De nouveaux camions à température dirigée pour livrer les produits frais et surgelés dans les régions.",
+    "en": "New temperature-controlled trucks to deliver fresh and frozen products to the regions."
+   }
+  },
+  {
+   "slug": "mozzarella-pizza-disponible",
+   "cat": "arrivages",
+   "date": "2026-07-22",
+   "img": "u-frais",
+   "prod": "FR-MZ25",
+   "t": {
+    "fr": "Mozzarella pizza 2,5 kg : le format pizzeria est disponible",
+    "en": "Pizza mozzarella 2.5 kg: the pizzeria size is in stock"
+   },
+   "x": {
+    "fr": "Un format râpé prêt à l’emploi, livré entre 0 et 4 °C.",
+    "en": "A ready-to-use grated format, delivered between 0 and 4 °C."
+   }
+  },
+  {
+   "slug": "rentree-cantines",
+   "cat": "gammes",
+   "date": "2026-07-10",
+   "img": "u-epicerie",
+   "t": {
+    "fr": "Rentrée : une offre dédiée aux cantines scolaires",
+    "en": "Back to school: an offer for school canteens"
+   },
+   "x": {
+    "fr": "Riz, huile, tomate et poisson en conserve à prix contractuel pour les établissements et les collectivités.",
+    "en": "Rice, oil, tomato and canned fish at contract prices for schools and local authorities."
+   }
+  },
+  {
+   "slug": "superettes-armee-senegalaise",
+   "cat": "societe",
+   "date": "2022-07-20",
+   "img": "n-armee",
+   "real": 1,
+   "t": {
+    "fr": "Ouverture de supérettes clés en main au profit de l’Armée sénégalaise",
+    "en": "Turnkey mini-markets opened for the Senegalese Armed Forces"
+   },
+   "x": {
+    "fr": "FLS a conçu, aménagé et approvisionné des supérettes pour l’Armée sénégalaise : une référence majeure de notre offre clés en main.",
+    "en": "FLS designed, fitted out and stocked mini-markets for the Senegalese Armed Forces, a flagship reference for our turnkey offer."
+   }
+  },
+  {
+   "slug": "ceremonie-lancement-fls",
+   "cat": "societe",
+   "date": "2022-08-12",
+   "img": "n-lancement",
+   "real": 1,
+   "t": {
+    "fr": "Cérémonie de lancement de FLS",
+    "en": "FLS launch ceremony"
+   },
+   "x": {
+    "fr": "Partenaires, clients et équipes du Groupe COSEMAD réunis pour le lancement officiel de Fourniture Libre Service.",
+    "en": "Partners, clients and COSEMAD Group teams gathered for the official launch of Fourniture Libre Service."
+   }
+  },
+  {
+   "slug": "superettes-thies",
+   "cat": "societe",
+   "date": "2026-06-18",
+   "img": "u-superette",
+   "t": {
+    "fr": "Trois supérettes clés en main ouvertes à Thiès",
+    "en": "Three turnkey mini-markets open in Thiès"
+   },
+   "x": {
+    "fr": "Aménagement, référencement et premier stock : retour sur un projet mené avec un promoteur local.",
+    "en": "Fit-out, product range and opening stock: a project delivered with a local developer."
+   }
+  }
+ ],
+ "newsCats": {
+  "gammes": {
+   "fr": "Nouvelles gammes",
+   "en": "New ranges"
+  },
+  "salons": {
+   "fr": "Salons & événements",
+   "en": "Trade fairs & events"
+  },
+  "arrivages": {
+   "fr": "Arrivages",
+   "en": "New arrivals"
+  },
+  "societe": {
+   "fr": "Vie de l’entreprise",
+   "en": "Company news"
+  },
+  "conseil": {
+   "fr": "Conseils métier",
+   "en": "Business tips"
+  }
+ },
+ "shelf": {
+  "boissons": "f-serene-gamme",
+  "epicerie": "f-rayons2",
+  "frais": "f-sup-rayons",
+  "surgeles": "f-stand1",
+  "conserves": "f-sup-rayons"
+ },
+ "sectorPicks": {
+  "ff": {
+   "fr": "Pour votre fast-food",
+   "en": "For your quick-service restaurant",
+   "codes": [
+    "HU-T20",
+    "SG-F09",
+    "EM-B500",
+    "CO-MY5",
+    "FR-CH1",
+    "SG-NG1"
+   ]
+  },
+  "su": {
+   "fr": "Pour votre supérette",
+   "en": "For your mini-market",
+   "codes": [
+    "UL-033",
+    "CO-TC07",
+    "LA-P400",
+    "PA-SP5",
+    "SU-PO50",
+    "EA-150"
+   ]
+  },
+  "gr": {
+   "fr": "Les incontournables du gros",
+   "en": "Wholesale essentials",
+   "codes": [
+    "RZ-BR50",
+    "SU-PO50",
+    "FA-T55",
+    "HU-T05",
+    "CO-SA12",
+    "CO-BC4"
+   ]
+  },
+  "re": {
+   "fr": "Pour votre restaurant",
+   "en": "For your restaurant",
+   "codes": [
+    "RZ-BR50",
+    "HU-T05",
+    "CO-TC22",
+    "SG-TH10",
+    "FR-CR1",
+    "SG-CP10"
+   ]
+  }
+ },
+ "allergens": {
+  "gluten": {
+   "fr": "Gluten",
+   "en": "Gluten"
+  },
+  "lait": {
+   "fr": "Lait",
+   "en": "Milk"
+  },
+  "oeuf": {
+   "fr": "Œuf",
+   "en": "Egg"
+  },
+  "poisson": {
+   "fr": "Poisson",
+   "en": "Fish"
+  },
+  "crustaces": {
+   "fr": "Crustacés",
+   "en": "Crustaceans"
+  },
+  "moutarde": {
+   "fr": "Moutarde",
+   "en": "Mustard"
+  },
+  "celeri": {
+   "fr": "Céleri",
+   "en": "Celery"
+  },
+  "soja": {
+   "fr": "Soja",
+   "en": "Soy"
+  },
+  "arachide": {
+   "fr": "Arachide",
+   "en": "Peanut"
+  }
+ },
+ "newsBody": {
+  "arrivages": {
+   "fr": [
+    "Les premières palettes ont été réceptionnées et contrôlées cette semaine. Les clients pro peuvent commander dès maintenant depuis le portail ou auprès de leur commercial.",
+    "Les quantités de lancement sont limitées : les commandes sont servies dans l’ordre d’arrivée."
+   ],
+   "en": [
+    "The first pallets were received and inspected this week. Trade customers can order now from the portal or through their sales rep.",
+    "Launch quantities are limited: orders are served in order of arrival."
+   ]
+  },
+  "salons": {
+   "fr": [
+    "Nos équipes présenteront les nouvelles gammes, le portail de commande pro et l’offre de supérettes clés en main. Des rendez-vous peuvent être réservés à l’avance.",
+    "Dates et numéro de stand communiqués dès confirmation par les organisateurs."
+   ],
+   "en": [
+    "Our teams will present the new ranges, the pro ordering portal and the turnkey mini-market offer. Meetings can be booked in advance.",
+    "Dates and stand number shared once confirmed by the organisers."
+   ]
+  },
+  "gammes": {
+   "fr": [
+    "Chaque référence dispose de sa fiche technique : ingrédients, allergènes, conditions de conservation et certificat halal le cas échéant.",
+    "Votre commercial peut vous proposer un panier type adapté à votre activité."
+   ],
+   "en": [
+    "Each item has its technical sheet: ingredients, allergens, storage conditions and halal certificate where relevant.",
+    "Your sales rep can suggest a saved basket suited to your business."
+   ]
+  },
+  "societe": {
+   "fr": [
+    "Ce projet s’inscrit dans la modernisation de FLS engagée avec le Groupe COSEMAD.",
+    "Nous continuerons à vous informer des prochaines étapes sur cette page et par la lettre commerciale."
+   ],
+   "en": [
+    "This project is part of the modernisation of FLS led with the COSEMAD Group.",
+    "We will keep you posted on next steps on this page and in the trade newsletter."
+   ]
+  },
+  "conseil": {
+   "fr": [
+    "Additionnez le coût de chaque ingrédient à la portion, divisez par le prix de vente hors taxes, et comparez au repère de 25 à 35 %.",
+    "Notre calculateur en ligne fait le calcul pour vous, et nos conseillers peuvent revoir vos formats d’achat."
+   ],
+   "en": [
+    "Add up the cost of each ingredient per portion, divide by the pre-tax selling price, and compare with the 25 to 35 % benchmark.",
+    "Our online calculator does the maths, and our advisers can review your purchase sizes."
+   ]
+  }
+ }
+}

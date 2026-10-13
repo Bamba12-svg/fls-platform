@@ -1,0 +1,42 @@
+/* Tailwind (préfixe sn- imposé par la contrainte AdBlock) + design system FLS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Ajouts spécifiques à l'application Next.js */
+.sn-ph > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover }
+.sn-pk-ph > img { position:static }
+.sn-prose-rich p + p { margin-top: 1em }
+.sn-prose-rich ul { padding-left: 1.2em; list-style: disc }
+.sn-prose-rich a { color: var(--sn-green) }
+.sn-video { position:relative; padding-top:56.25%; border-radius:var(--sn-r2); overflow:hidden; background:var(--sn-navy-9) }
+.sn-video iframe { position:absolute; inset:0; width:100%; height:100%; border:0 }
+.sn-gal { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:10px }
+.sn-gal .sn-ph { aspect-ratio:4/3; border-radius:var(--sn-r1) }
+.sn-login-card { max-width:460px; margin-inline:auto }
+.sn-seg .sn-seg-a{color:#C9D6E4;font-size:.75rem;font-weight:600;padding:2px 9px;border-radius:999px;text-decoration:none}
+.sn-seg .sn-seg-a[data-on="true"]{background:#fff;color:var(--sn-navy-9)}
+.sn-seg-lt{border-color:var(--sn-line)!important}
+.sn-seg-lt button,.sn-seg-lt .sn-seg-a{color:var(--sn-navy)!important}
+.sn-seg-lt [aria-pressed="true"],.sn-seg-lt .sn-seg-a[data-on="true"]{background:var(--sn-navy)!important;color:#fff!important}
+.sn-dd{position:absolute;top:calc(100% + 8px);left:0;min-width:270px;padding:8px;box-shadow:var(--sn-sh2);z-index:5}
+.sn-dd a{display:block;padding:10px 12px;border-radius:8px;color:var(--sn-navy-9);text-decoration:none;font-weight:600;font-size:.92rem}
+.sn-dd a:hover{background:var(--sn-bg2)}
+.sn-pk-ph img{transition:transform .6s var(--sn-ease)}
+.sn-card:hover .sn-pk-ph:not(.sn-pk-shelf) img{transform:scale(1.05)}
+.sn-pk-shelf img{transform:scale(1.7)}
+.sn-card:hover .sn-pk-shelf img{transform:scale(1.8)}
+.sn-pk-ph{background:#fff}
+.sn-pdp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);margin-top:20px;align-items:start}
+.sn-pdp-v{position:relative;border:1px solid var(--sn-line);border-radius:var(--sn-r2);overflow:hidden;background:#fff}
+.sn-pdp-v .sn-pk{aspect-ratio:1/1}
+.sn-pdp-v .sn-flag{position:absolute;top:14px;left:14px}
+@media (max-width:860px){.sn-pdp{grid-template-columns:1fr}}
+.sn-flash .sn-stk{animation:sn-flash 1.2s ease}
+@keyframes sn-flash{from{background:#FFF0B8}to{background:transparent}}
+.sn-login-g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.sn-login-side{padding:clamp(24px,3vw,36px);background:var(--sn-navy);color:#fff}
+.sn-login-side .sn-checks svg{color:#7FD1A1}
+@media (max-width:760px){.sn-login-g{grid-template-columns:1fr}}
+.sn-drawer:not(.sn-open){box-shadow:none;visibility:hidden;transition:transform .35s var(--sn-ease),visibility 0s linear .35s}

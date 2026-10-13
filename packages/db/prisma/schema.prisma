@@ -1,0 +1,374 @@
+// Modèle de données FLS – PostgreSQL (Neon) via Prisma.
+// Couvre : catalogue multi-univers, grilles tarifaires par segment, comptes pro modérés,
+// commandes B2B, devis/contacts, actualités par blocs, médiathèque, journal d'audit, réglages B2C.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  COMMERCIAL
+  EDITOR
+}
+
+enum Segment {
+  GROSSISTE
+  DEMI_GROSSISTE
+  CHR
+  B2C
+}
+
+enum AccountStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  SUSPENDED
+}
+
+enum OrderStatus {
+  RECEIVED
+  PREPARING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+enum LeadType {
+  ACCOUNT
+  QUOTE
+  TURNKEY
+  ADVICE
+  KEY_ACCOUNT
+  CONTACT
+  APPLICATION
+  NEWSLETTER
+}
+
+enum LeadStatus {
+  NEW
+  IN_PROGRESS
+  DONE
+  ARCHIVED
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+}
+
+enum DocumentKind {
+  NINEA
+  RCCM
+  OTHER
+}
+
+// ---------- Équipe FLS (back-office) ----------
+model StaffUser {
+  id           String     @id @default(cuid())
+  email        String     @unique
+  name         String
+  passwordHash String
+  role         Role       @default(EDITOR)
+  active       Boolean    @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime   @default(now())
+  auditLogs    AuditLog[]
+  approved     Customer[] @relation("ApprovedBy")
+}
+
+// ---------- Clients professionnels (et grand public) ----------
+model Customer {
+  id           String             @id @default(cuid())
+  email        String             @unique
+  passwordHash String?
+  companyName  String
+  contactName  String
+  phone        String
+  city         String
+  segment      Segment            @default(CHR)
+  status       AccountStatus      @default(PENDING)
+  ninea        String?
+  rccm         String?
+  creditLimit  Int                @default(0)
+  salesRep     String?
+  approvedAt   DateTime?
+  approvedById String?
+  approvedBy   StaffUser?         @relation("ApprovedBy", fields: [approvedById], references: [id])
+  createdAt    DateTime           @default(now())
+  documents    CustomerDocument[]
+  orders       Order[]
+  baskets      SavedBasket[]
+
+  @@index([status])
+}
+
+model CustomerDocument {
+  id         String       @id @default(cuid())
+  customerId String
+  customer   Customer     @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  kind       DocumentKind
+  mediaId    String
+  media      Media        @relation(fields: [mediaId], references: [id])
+  createdAt  DateTime     @default(now())
+}
+
+// ---------- Catalogue ----------
+model Universe {
+  id             String            @id @default(cuid())
+  slug           String            @unique
+  nameFr         String
+  nameEn         String
+  descFr         String
+  descEn         String
+  volumeValue    String
+  volumeLabelFr  String
+  volumeLabelEn  String
+  image          String?
+  sort           Int               @default(0)
+  subcategories  Subcategory[]
+  products       ProductUniverse[]
+  posts          PostUniverse[]
+  discounts      VolumeDiscount[]
+}
+
+model Subcategory {
+  id         String    @id @default(cuid())
+  universeId String
+  universe   Universe  @relation(fields: [universeId], references: [id], onDelete: Cascade)
+  slug       String
+  nameFr     String
+  nameEn     String
+  sort       Int       @default(0)
+  products   Product[]
+
+  @@unique([universeId, slug])
+}
+
+model Brand {
+  id        String    @id @default(cuid())
+  name      String    @unique
+  slug      String    @unique
+  exclusive Boolean   @default(false)
+  logo      String?
+  products  Product[]
+}
+
+model Product {
+  id                String            @id @default(cuid())
+  code              String            @unique
+  slug              String            @unique
+  nameFr            String
+  nameEn            String
+  descriptionFr     String?
+  descriptionEn     String?
+  brandId           String
+  brand             Brand             @relation(fields: [brandId], references: [id])
+  subcategoryId     String?
+  subcategory       Subcategory?      @relation(fields: [subcategoryId], references: [id])
+  packFr            String
+  packEn            String
+  unitsPerCase      Int
+  casesPerPallet    Int
+  minOrderMultiple  Int               @default(1)
+  /// Prix carton HT de référence (grille CHR), en F CFA
+  basePrice         Int
+  stock             Int               @default(0)
+  origin            String?
+  halal             Boolean           @default(true)
+  allergens         String[]
+  nutrition         Json?
+  image             String?
+  /// Blocs de contenu (éditeur par blocs du back-office)
+  blocks            Json?
+  sectors           String[]
+  isNew             Boolean           @default(false)
+  isDeal            Boolean           @default(false)
+  isFeatured        Boolean           @default(false)
+  active            Boolean           @default(true)
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  universes         ProductUniverse[]
+  discounts         VolumeDiscount[]
+  orderLines        OrderLine[]
+  featuredInPosts   Post[]
+
+  @@index([active])
+}
+
+/// « Univers associés » : un produit peut remonter dans plusieurs univers
+model ProductUniverse {
+  productId  String
+  universeId String
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  universe   Universe @relation(fields: [universeId], references: [id], onDelete: Cascade)
+
+  @@id([productId, universeId])
+}
+
+/// Coefficient appliqué au prix de référence pour chaque segment de clientèle
+model PriceGrid {
+  id          String  @id @default(cuid())
+  segment     Segment @unique
+  label       String
+  coefficient Float
+}
+
+/// Remises sur volume : globales, par univers ou par produit
+model VolumeDiscount {
+  id         String    @id @default(cuid())
+  productId  String?
+  product    Product?  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  universeId String?
+  universe   Universe? @relation(fields: [universeId], references: [id], onDelete: Cascade)
+  minCases   Int?
+  pallet     Boolean   @default(false)
+  percent    Float
+}
+
+// ---------- Commandes ----------
+model Order {
+  id         String      @id @default(cuid())
+  ref        String      @unique
+  customerId String
+  customer   Customer    @relation(fields: [customerId], references: [id])
+  status     OrderStatus @default(RECEIVED)
+  subtotal   Int
+  shipping   Int
+  vat        Int
+  total      Int
+  notes      String?
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  lines      OrderLine[]
+  invoice    Invoice?
+
+  @@index([customerId, createdAt])
+}
+
+model OrderLine {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  code      String
+  name      String
+  qty       Int
+  unitPrice Int
+  total     Int
+}
+
+model Invoice {
+  id        String    @id @default(cuid())
+  ref       String    @unique
+  orderId   String    @unique
+  order     Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  amount    Int
+  dueDate   DateTime
+  paidAt    DateTime?
+  createdAt DateTime  @default(now())
+}
+
+model SavedBasket {
+  id         String   @id @default(cuid())
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  name       String
+  /// [{ code, qty }]
+  lines      Json
+}
+
+// ---------- Demandes entrantes (devis, contact, candidatures…) ----------
+model Lead {
+  id        String     @id @default(cuid())
+  type      LeadType
+  status    LeadStatus @default(NEW)
+  company   String?
+  name      String?
+  phone     String?
+  email     String?
+  city      String?
+  message   String?
+  payload   Json?
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@index([type, status])
+}
+
+// ---------- Actualités (modèle unifié avec les produits) ----------
+model Post {
+  id                String         @id @default(cuid())
+  slug              String         @unique
+  category          String
+  titleFr           String
+  titleEn           String
+  excerptFr         String
+  excerptEn         String
+  /// Blocs : texte enrichi, image, galerie, vidéo, tableau nutritionnel, allergènes, pièce jointe, produit lié
+  blocks            Json
+  cover             String?
+  status            PostStatus     @default(DRAFT)
+  publishedAt       DateTime?
+  featuredProductId String?
+  featuredProduct   Product?       @relation(fields: [featuredProductId], references: [id])
+  showOnHome        Boolean        @default(false)
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  universes         PostUniverse[]
+
+  @@index([status, publishedAt])
+}
+
+model PostUniverse {
+  postId     String
+  universeId String
+  post       Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  universe   Universe @relation(fields: [universeId], references: [id], onDelete: Cascade)
+
+  @@id([postId, universeId])
+}
+
+// ---------- Médiathèque ----------
+model Media {
+  id        String             @id @default(cuid())
+  filename  String
+  url       String
+  mime      String
+  width     Int?
+  height    Int?
+  size      Int
+  alt       String?
+  createdAt DateTime           @default(now())
+  documents CustomerDocument[]
+}
+
+// ---------- Journal d'audit (append-only, protégé par trigger SQL) ----------
+model AuditLog {
+  id         String     @id @default(cuid())
+  actorId    String?
+  actor      StaffUser? @relation(fields: [actorId], references: [id])
+  actorEmail String
+  action     String
+  entity     String
+  entityId   String?
+  details    Json?
+  ip         String?
+  createdAt  DateTime   @default(now())
+
+  @@index([createdAt])
+  @@index([entity, entityId])
+}
+
+// ---------- Réglages (canal B2C, TVA, franco…) ----------
+model Setting {
+  key       String   @id
+  value     Json
+  updatedAt DateTime @updatedAt
+}
