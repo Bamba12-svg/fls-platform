@@ -164,3 +164,9 @@
 @keyframes sn-mx-scroll{to{transform:translateX(calc(-50% - 10px))}}
 @media(max-width:760px){.sn-mx-track{animation-duration:35s}.sn-mx-track .sn-mx-cat-row{height:120px}}
 @media (prefers-reduced-motion:reduce){.sn-mx-track{animation:none}.sn-mx-cats{overflow-x:auto}}
+
+/* ===== Maria : catégories en panneaux (comme les univers) ===== */
+.sn-mx-acc{margin-top:clamp(36px,5vw,60px)}
+.sn-mx-acc .sn-ph img{object-fit:cover}
+.sn-mx-names{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.sn-mx-names li{font-size:.84rem;font-weight:600;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(4px);padding:4px 10px;border-radius:999px}
