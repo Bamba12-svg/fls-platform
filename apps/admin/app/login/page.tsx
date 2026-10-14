@@ -14,4 +14,4 @@ export default async function Login() {
     </div></main>
   );
 }
-function Mark() { return <svg viewBox="0 0 64 64" width={40} height={40} aria-hidden="true"><rect width="64" height="64" rx="14" fill="#003366" /><path d="M24 8h26L38 56H12Z" fill="#0E7745" /><text x="31" y="47" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontWeight={900} fontSize={36} fill="#DCCB2E" transform="skewX(-11) translate(8 0)">F</text></svg>; }
+function Mark() { return <svg viewBox="0 0 64 64" width={40} height={40} aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0A4A2A" /><path d="M24 8h26L38 56H12Z" fill="#0E7745" /><text x="31" y="47" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontWeight={900} fontSize={36} fill="#DCCB2E" transform="skewX(-11) translate(8 0)">F</text></svg>; }

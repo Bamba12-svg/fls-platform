@@ -29,7 +29,7 @@ export function LoginForm({ demo }: { demo: boolean }) {
     <div className="sn-login-g">
       <div className="sn-login-side">
         <h2 style={{ color: '#fff', fontSize: '1.6rem' }}>{t('Mon Compte FLS', 'My FLS Account')}</h2>
-        <p style={{ color: '#C9D6E4', marginTop: 10 }}>{t('Vos prix négociés, vos factures et la recommande en un clic.', 'Your negotiated prices, invoices and one-click reorders.')}</p>
+        <p style={{ color: '#D6E2DA', marginTop: 10 }}>{t('Vos prix négociés, vos factures et la recommande en un clic.', 'Your negotiated prices, invoices and one-click reorders.')}</p>
         <ul className="sn-checks" style={{ gridTemplateColumns: '1fr', margin: '24px 0 0' }}>{[t('Grille tarifaire selon votre profil', 'Price grid for your profile'), t('Suivi des livraisons', 'Delivery tracking'), t('Factures PDF et encours', 'PDF invoices and balance')].map((x) => <li key={x} style={{ color: '#fff' }}><Icon name="check" /><span style={{ color: '#fff' }}>{x}</span></li>)}</ul>
       </div>
       <div style={{ padding: 'clamp(20px,3vw,32px)' }}>

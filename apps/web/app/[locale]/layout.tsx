@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 import { getRepo } from '@fls/db';
 import { Footer } from '@/components/Footer';
+import { Preloader } from '@/components/Preloader';
 import { Header, MobileNav, TabBar, type NavUniverse } from '@/components/Header';
 import { Motion } from '@/components/Motion';
 import { AppProviders } from '@/components/providers';
@@ -18,7 +19,7 @@ import { UNIVERSE_ICON } from '@/lib/catalog';
 import { alternates, isLocale, locales, SITE_URL, tr } from '@/lib/i18n';
 
 export const generateStaticParams = () => locales.map((locale) => ({ locale }));
-export const viewport: Viewport = { themeColor: '#003366', width: 'device-width', initialScale: 1 };
+export const viewport: Viewport = { themeColor: '#0A4A2A', width: 'device-width', initialScale: 1 };
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const l = isLocale(params.locale) ? params.locale : 'fr'; const t = tr(l);
@@ -48,6 +49,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   return (
     <html lang={l}>
       <body>
+        <Preloader />
         <AppProviders locale={l}>
           <a className="sn-skip" href="#sn-main">{t('Aller au contenu', 'Skip to content')}</a>
           <Header universes={nav} />

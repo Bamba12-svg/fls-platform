@@ -16,12 +16,12 @@ function StreetMap({ label }: { label: string }) {
   const X = 30 + 3 * 62, Y = 30 + 2 * 55;
   return (
     <svg viewBox="0 0 420 220" role="img" aria-label={label}>
-      {Array.from({ length: 7 }, (_, i) => <line key={`v${i}`} x1={30 + i * 62} y1={10} x2={30 + i * 62} y2={210} stroke={i === 3 ? '#003366' : '#D5DDD7'} strokeWidth={i === 3 ? 6 : 10} strokeLinecap="round" />)}
-      {Array.from({ length: 4 }, (_, j) => <line key={`h${j}`} x1={10} y1={30 + j * 55} x2={410} y2={30 + j * 55} stroke={j === 2 ? '#003366' : '#D5DDD7'} strokeWidth={j === 2 ? 6 : 10} strokeLinecap="round" />)}
-      <text x={X + 8} y={22} fontSize={11} fontWeight={700} fill="#003366" fontFamily="Figtree Variable,sans-serif">Rue 39</text>
-      <text x={16} y={Y - 9} fontSize={11} fontWeight={700} fill="#003366" fontFamily="Figtree Variable,sans-serif">Rue 22</text>
+      {Array.from({ length: 7 }, (_, i) => <line key={`v${i}`} x1={30 + i * 62} y1={10} x2={30 + i * 62} y2={210} stroke={i === 3 ? '#0A4A2A' : '#D5DDD7'} strokeWidth={i === 3 ? 6 : 10} strokeLinecap="round" />)}
+      {Array.from({ length: 4 }, (_, j) => <line key={`h${j}`} x1={10} y1={30 + j * 55} x2={410} y2={30 + j * 55} stroke={j === 2 ? '#0A4A2A' : '#D5DDD7'} strokeWidth={j === 2 ? 6 : 10} strokeLinecap="round" />)}
+      <text x={X + 8} y={22} fontSize={11} fontWeight={700} fill="#0A4A2A" fontFamily="Figtree Variable,sans-serif">Rue 39</text>
+      <text x={16} y={Y - 9} fontSize={11} fontWeight={700} fill="#0A4A2A" fontFamily="Figtree Variable,sans-serif">Rue 22</text>
       <g transform={`translate(${X} ${Y})`}><circle r={22} fill="#006633" fillOpacity={0.15} /><path d="M0 -4 C0 -18 -12 -18 -12 -28 a12 12 0 0 1 24 0 c0 10 -12 10 -12 24Z" fill="#006633" transform="translate(0 4)" /><circle cy={-24} r={4.5} fill="#fff" /></g>
-      <rect x={X + 14} y={Y + 10} width={58} height={22} rx={6} fill="#001a35" /><text x={X + 43} y={Y + 25} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle" fontFamily="Figtree Variable,sans-serif">FLS</text>
+      <rect x={X + 14} y={Y + 10} width={58} height={22} rx={6} fill="#10241A" /><text x={X + 43} y={Y + 25} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle" fontFamily="Figtree Variable,sans-serif">FLS</text>
     </svg>
   );
 }
