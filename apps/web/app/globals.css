@@ -90,3 +90,12 @@
 .sn-hero::before{background:radial-gradient(75% 85% at 50% 50%,rgba(16,36,26,.68) 0%,rgba(16,36,26,.5) 55%,rgba(16,36,26,.38) 100%),linear-gradient(0deg,rgba(16,36,26,.5),transparent 35%)}
 .sn-hero-lede{color:#E3EAE5}
 .sn-dot{color:#B9C9BE}
+
+/* ===== Actualités : grandes cartes centrées sur la page ===== */
+.sn-nlist{grid-template-columns:minmax(0,860px);justify-content:center}
+.sn-nlist .sn-new,.sn-nlist .sn-new:first-child{grid-column:auto;grid-row:auto}
+.sn-nlist .sn-new .sn-ph{aspect-ratio:16/11}
+.sn-nlist .sn-new h3{font-size:1.6rem}
+.sn-nlist .sn-empty{grid-column:auto}
+@media(max-width:640px){.sn-nlist .sn-new h3{font-size:1.25rem}}
+.sn-fbar:has(+ .sn-nlist),.sn-fbar:has(+ .sn-nlist) .sn-chips{justify-content:center}
