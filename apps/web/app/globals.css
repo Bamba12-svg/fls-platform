@@ -40,3 +40,5 @@
 .sn-login-side .sn-checks svg{color:#7FD1A1}
 @media (max-width:760px){.sn-login-g{grid-template-columns:1fr}}
 .sn-drawer:not(.sn-open){box-shadow:none;visibility:hidden;transition:transform .35s var(--sn-ease),visibility 0s linear .35s}
+.sn-mega-desc{margin:-4px 0 8px 38px;font-size:.82rem;color:var(--sn-muted);line-height:1.4}
+.sn-mega-feat-svc h4{margin-top:4px}

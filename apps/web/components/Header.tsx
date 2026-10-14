@@ -13,19 +13,36 @@ export interface NavUniverse { slug: string; name: { fr: string; en: string }; i
 
 const swapLocale = (path: string, to: string) => path.replace(/^\/(fr|en)(?=\/|$)/, `/${to}`) || `/${to}`;
 
+type L10 = { fr: string; en: string };
+const tx = (fr: string, en: string): L10 => ({ fr, en });
+/** Contenu du méga-menu Services (même présentation que Produits). */
+const SERVICES: { href: string; icon: string; title: L10; desc: L10; links: { href: string; label: L10 }[] }[] = [
+  { href: '/catalogue', icon: 'bolt', title: tx('Commande pro en ligne', 'Online pro ordering'), desc: tx('Votre grille tarifaire et le stock réel, 24 h/24.', 'Your price grid and live stock, 24/7.'),
+    links: [{ href: '/catalogue', label: tx('Commande rapide par code', 'Quick order by code') }, { href: '/compte', label: tx('Suivi des livraisons et factures', 'Deliveries and invoices') }, { href: '/contact', label: tx('Ouvrir un compte pro', 'Open a pro account') }] },
+  { href: '/conseil', icon: 'chef', title: tx('Conseil & assistance métier', 'Business advice & support'), desc: tx('Un conseiller dédié pour les CHR et supérettes.', 'A dedicated adviser for food service and shops.'),
+    links: [{ href: '/conseil', label: tx('Création et refonte de carte', 'Menu design') }, { href: '/conseil', label: tx('Calculateur de coût matière', 'Food cost calculator') }, { href: '/conseil', label: tx('Gestion des stocks et merchandising', 'Stock and merchandising') }] },
+  { href: '/cles-en-main', icon: 'store', title: tx('Supérettes clés en main', 'Turnkey mini-markets'), desc: tx('De l’étude de zone au premier client en caisse.', 'From site study to the first customer.'),
+    links: [{ href: '/cles-en-main', label: tx('Formats et aménagement', 'Formats and fit-out') }, { href: '/cles-en-main', label: tx('Approvisionnement initial', 'Opening stock') }, { href: '/cles-en-main', label: tx('Nos réalisations', 'Our projects') }] },
+  { href: '/societe/grands-comptes', icon: 'building', title: tx('Grands comptes', 'Key accounts'), desc: tx('Cantines, hôtels, centrales d’achat.', 'Canteens, hotels, buying groups.'),
+    links: [{ href: '/societe/grands-comptes', label: tx('Contrats cadre à prix fermes', 'Fixed-price framework contracts') }, { href: '/societe/grands-comptes', label: tx('Dossiers d’appel d’offres', 'Tender files') }, { href: '/societe/qualite', label: tx('Qualité, hygiène et traçabilité', 'Quality and traceability') }] },
+];
+
 export function Header({ universes }: { universes: NavUniverse[] }) {
   const l = useLocale(); const t = useT(); const path = usePathname() || `/${l}`;
   const { cur, setCur } = useMoney(); const ui = useUI(); const { lines } = useCart(); const { data: session } = useSession();
-  const [mega, setMega] = useState(false); const [dd, setDd] = useState(false); const [stuck, setStuck] = useState(false);
+  const [menu, setMenu] = useState<null | 'prod' | 'svc'>(null); const [stuck, setStuck] = useState(false);
   const megaTimer = useRef<ReturnType<typeof setTimeout>>();
   useEffect(() => { const f = () => setStuck(scrollY > 8); f(); addEventListener('scroll', f, { passive: true }); return () => removeEventListener('scroll', f); }, []);
-  useEffect(() => { setMega(false); setDd(false); }, [path]);
+  useEffect(() => { setMenu(null); }, [path]);
+  useEffect(() => { if (!menu) return; const k = (e: KeyboardEvent) => { if (e.key === 'Escape') setMenu(null); }; addEventListener('keydown', k); return () => removeEventListener('keydown', k); }, [menu]);
   const L = (p: string) => `/${l}${p}`;
   const active = (p: string) => (path.startsWith(L(p)) ? 'page' : undefined);
-  const hoverMega = (open: boolean) => { if (matchMedia('(hover: none)').matches) return; clearTimeout(megaTimer.current); megaTimer.current = setTimeout(() => setMega(open), open ? 120 : 200); };
+  /** Méga-menus (Produits, Services) : ouverture au survol avec un léger délai, maintien tant que le curseur est dans le panneau. */
+  const hoverMenu = (m: null | 'prod' | 'svc') => { if (matchMedia('(hover: none)').matches) return; clearTimeout(megaTimer.current); megaTimer.current = setTimeout(() => setMenu(m), m ? 120 : 200); };
+  const toggle = (m: 'prod' | 'svc') => { clearTimeout(megaTimer.current); setMenu((x) => (x === m ? null : m)); };
 
   return (
-    <header className={`sn-top ${stuck ? 'sn-is-stuck' : ''}`} onMouseLeave={() => hoverMega(false)}>
+    <header className={`sn-top ${stuck ? 'sn-is-stuck' : ''}`} onMouseLeave={() => hoverMenu(null)}>
       <div className="sn-util"><div className="sn-wrap">
         <span className="sn-util-i"><Icon name="phone" /><span>+221 33 889 06 66</span></span>
         <span className="sn-util-i sn-util-hide"><Icon name="pin" /><span>{t('Siège : Médina, Rue 39 x 22, Dakar', 'Head office: Médina, Rue 39 x 22, Dakar')}</span></span>
@@ -46,19 +63,12 @@ export function Header({ universes }: { universes: NavUniverse[] }) {
         <Logo locale={l} />
         <nav aria-label={t('Navigation principale', 'Main navigation')}>
           <ul className="sn-menu">
-            <li><button type="button" aria-expanded={mega} aria-controls="sn-mega" onClick={() => setMega((m) => !m)} onMouseEnter={() => hoverMega(true)}>{t('Produits', 'Products')}<Icon name="chev" /></button></li>
-            <li style={{ position: 'relative' }}>
-              <button type="button" aria-expanded={dd} aria-controls="sn-dd-svc" onClick={() => setDd((d) => !d)}>{t('Services', 'Services')}<Icon name="chev" /></button>
-              <div id="sn-dd-svc" className="sn-box sn-dd" hidden={!dd}>
-                <Link href={L('/conseil')}>{t('Conseil & assistance métier', 'Business advice & support')}</Link>
-                <Link href={L('/cles-en-main')}>{t('Supérettes clés en main', 'Turnkey mini-markets')}</Link>
-                <Link href={L('/societe/grands-comptes')}>{t('Grands comptes', 'Key accounts')}</Link>
-              </div>
-            </li>
-            <li><Link href={L('/catalogue')} aria-current={active('/catalogue')}>{t('Commande pro', 'Pro ordering')}</Link></li>
-            <li><Link href={L('/societe')} aria-current={active('/societe')}>{t('La société', 'Company')}</Link></li>
-            <li><Link href={L('/actualites')} aria-current={active('/actualites')}>{t('Actualités', 'News')}</Link></li>
-            <li><Link href={L('/contact')} aria-current={active('/contact')}>Contact</Link></li>
+            <li><button type="button" aria-expanded={menu === 'prod'} aria-controls="sn-mega" onClick={() => toggle('prod')} onMouseEnter={() => hoverMenu('prod')}>{t('Produits', 'Products')}<Icon name="chev" /></button></li>
+            <li><button type="button" aria-expanded={menu === 'svc'} aria-controls="sn-mega-svc" onClick={() => toggle('svc')} onMouseEnter={() => hoverMenu('svc')}>{t('Services', 'Services')}<Icon name="chev" /></button></li>
+            <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/catalogue')} aria-current={active('/catalogue')}>{t('Commande pro', 'Pro ordering')}</Link></li>
+            <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/societe')} aria-current={active('/societe')}>{t('La société', 'Company')}</Link></li>
+            <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/actualites')} aria-current={active('/actualites')}>{t('Actualités', 'News')}</Link></li>
+            <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/contact')} aria-current={active('/contact')}>Contact</Link></li>
           </ul>
         </nav>
         <span className="sn-nav-sp" />
@@ -73,7 +83,7 @@ export function Header({ universes }: { universes: NavUniverse[] }) {
           <button className="sn-ico" type="button" onClick={() => ui.open('cart')} aria-label={t('Panier', 'Cart')}><Icon name="cart" />{lines.length > 0 && <span className="sn-count">{lines.length}</span>}</button>
         </div>
       </div>
-      <div className={`sn-mega ${mega ? 'sn-open' : ''}`} id="sn-mega" role="region" aria-label={t('Univers produits', 'Product ranges')} onMouseEnter={() => hoverMega(true)}>
+      <div className={`sn-mega ${menu === 'prod' ? 'sn-open' : ''}`} id="sn-mega" role="region" aria-label={t('Univers produits', 'Product ranges')} onMouseEnter={() => hoverMenu('prod')}>
         <div className="sn-wrap sn-mega-in">
           {universes.map((u) => (
             <div className="sn-mega-col" key={u.slug}>
@@ -90,7 +100,25 @@ export function Header({ universes }: { universes: NavUniverse[] }) {
           </Link>
         </div>
       </div>
-    </header>
+          <div className={`sn-mega ${menu === 'svc' ? 'sn-open' : ''}`} id="sn-mega-svc" role="region" aria-label={t('Nos services', 'Our services')} onMouseEnter={() => hoverMenu('svc')}>
+        <div className="sn-wrap sn-mega-in">
+          {SERVICES.map((g) => (
+            <div className="sn-mega-col" key={g.href}>
+              <h3><span className="sn-mega-dot"><Icon name={g.icon} /></span><Link href={L(g.href)}>{g.title[l]}</Link></h3>
+              <p className="sn-mega-desc">{g.desc[l]}</p>
+              <ul>{g.links.map((x) => <li key={x.href + x.label.fr}><Link href={L(x.href)}>{x.label[l]}</Link></li>)}</ul>
+            </div>
+          ))}
+          <div className="sn-mega-feat sn-mega-feat-svc" style={{ gridColumn: 4, gridRow: '1 / span 2' }}>
+            <Photo src="/img/u-conseil.webp" icon="chef" sizes="300px" />
+            <span className="sn-flag sn-flag-new" style={{ alignSelf: 'flex-start' }}>{t('Inclus pour les pros', 'Included for trade')}</span>
+            <h4>{t('Un conseiller FLS dans votre cuisine', 'An FLS adviser in your kitchen')}</h4>
+            <p>{t('Carte, coût matière et stocks : un diagnostic sur place, puis un plan d’action chiffré.', 'Menu, food cost and stock: an on-site review, then a costed action plan.')}</p>
+            <button type="button" className="sn-btn sn-btn-go sn-btn-sm" style={{ alignSelf: 'flex-start', marginTop: 6 }} onClick={() => { setMenu(null); ui.openDevis('conseil'); }}>{t('Demander une visite', 'Request a visit')}</button>
+          </div>
+        </div>
+      </div>
+</header>
   );
 }
 
