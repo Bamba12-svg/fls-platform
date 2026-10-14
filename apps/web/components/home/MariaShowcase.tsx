@@ -38,18 +38,20 @@ export function MariaShowcase() {
         </div>
       </div>
 
-      <div className="sn-mx-cats">
-        {MARIA_RANGE.map((c) => (
-          <section key={c.key} className={`sn-mx-cat sn-mx-cat-${c.key}`} aria-label={c.name[l]}>
-            <div className="sn-mx-cat-vis">
-              <div className="sn-mx-cat-row">{c.items.map((it) => <Image key={it.code} src={it.img} alt="" width={200} height={260} sizes="160px" />)}</div>
-              <h3>{c.name[l]}</h3>
-            </div>
-            <ul className="sn-mx-cat-list">
-              {c.items.map((it) => <li key={it.code}><Link href={`/${l}/categories/${it.universe}/${it.slug}`}><span>{it.name[l]}</span><small className="sn-num">{it.code}</small></Link></li>)}
-            </ul>
-          </section>
-        ))}
+      <div className="sn-mx-cats" aria-label={t('La gamme Maria par catégorie', 'The Maria range by category')}>
+        <div className="sn-mx-track">
+          {[0, 1].map((copy) => MARIA_RANGE.map((c) => (
+            <section key={`${copy}-${c.key}`} className={`sn-mx-cat sn-mx-cat-${c.key}`} aria-label={c.name[l]} aria-hidden={copy === 1 || undefined}>
+              <div className="sn-mx-cat-vis">
+                <div className="sn-mx-cat-row">{c.items.map((it) => <Image key={it.code} src={it.img} alt="" width={200} height={260} sizes="160px" loading="eager" />)}</div>
+                <h3>{c.name[l]}</h3>
+              </div>
+              <ul className="sn-mx-cat-list">
+                {c.items.map((it) => <li key={it.code}><Link href={`/${l}/categories/${it.universe}/${it.slug}`} tabIndex={copy === 1 ? -1 : undefined}><span>{it.name[l]}</span><small className="sn-num">{it.code}</small></Link></li>)}
+              </ul>
+            </section>
+          )))}
+        </div>
       </div>
 
       <div className="sn-mx-photos">

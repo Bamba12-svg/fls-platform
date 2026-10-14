@@ -151,3 +151,16 @@
 .sn-mx-video video{background:#0F2A1C}
 @media(max-width:760px){.sn-mx-cats{grid-template-columns:1fr}.sn-mx-cat-row{height:130px}.sn-mx-cat-list,.sn-mx-cat-jus .sn-mx-cat-list{grid-template-columns:1fr}.sn-mx-cat-jus .sn-mx-cat-row img{max-width:16%}}
 .sn-mx-cat-vis h3{font-weight:800;letter-spacing:-.01em}
+
+/* ===== Maria : catégories en bandeau qui défile ===== */
+.sn-mx-cats{display:block;overflow:hidden;margin-top:clamp(36px,5vw,60px);margin-inline:calc(var(--sn-gut) * -1);padding:10px 0 18px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.sn-mx-track{display:flex;gap:20px;width:max-content;animation:sn-mx-scroll 45s linear infinite}
+.sn-mx-cats:hover .sn-mx-track,.sn-mx-cats:focus-within .sn-mx-track{animation-play-state:paused}
+.sn-mx-track .sn-mx-cat{width:clamp(290px,30vw,400px);flex:none}
+.sn-mx-track .sn-mx-cat-jus{width:clamp(340px,40vw,540px)}
+.sn-mx-track .sn-mx-cat-list{grid-template-columns:1fr}
+.sn-mx-track .sn-mx-cat-jus .sn-mx-cat-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sn-mx-track .sn-mx-cat-row{height:150px}
+@keyframes sn-mx-scroll{to{transform:translateX(calc(-50% - 10px))}}
+@media(max-width:760px){.sn-mx-track{animation-duration:35s}.sn-mx-track .sn-mx-cat-row{height:120px}}
+@media (prefers-reduced-motion:reduce){.sn-mx-track{animation:none}.sn-mx-cats{overflow-x:auto}}
