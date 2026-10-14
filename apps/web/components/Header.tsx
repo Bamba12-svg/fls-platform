@@ -64,10 +64,10 @@ export function Header({ universes }: { universes: NavUniverse[] }) {
         <nav aria-label={t('Navigation principale', 'Main navigation')}>
           <ul className="sn-menu">
             <li onMouseEnter={() => hoverMenu(null)}><Link href={L('')} aria-current={path === L('') ? 'page' : undefined}>{t('Accueil', 'Home')}</Link></li>
+            <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/societe')} aria-current={active('/societe')}>{t('À propos', 'About us')}</Link></li>
             <li><button type="button" aria-expanded={menu === 'prod'} aria-controls="sn-mega" onClick={() => toggle('prod')} onMouseEnter={() => hoverMenu('prod')}>{t('Produits', 'Products')}<Icon name="chev" /></button></li>
             <li><button type="button" aria-expanded={menu === 'svc'} aria-controls="sn-mega-svc" onClick={() => toggle('svc')} onMouseEnter={() => hoverMenu('svc')}>{t('Services', 'Services')}<Icon name="chev" /></button></li>
             <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/catalogue')} aria-current={active('/catalogue')}>{t('Commande pro', 'Pro ordering')}</Link></li>
-            <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/societe')} aria-current={active('/societe')}>{t('La société', 'Company')}</Link></li>
             <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/actualites')} aria-current={active('/actualites')}>{t('Actualités', 'News')}</Link></li>
             <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/contact')} aria-current={active('/contact')}>Contact</Link></li>
           </ul>
@@ -134,17 +134,17 @@ export function MobileNav({ universes }: { universes: NavUniverse[] }) {
       <div className="sn-mnav-h"><Logo locale={l} sub={false} /><button className="sn-close" type="button" onClick={ui.close} aria-label={t('Fermer le menu', 'Close menu')}><Icon name="close" /></button></div>
       <div className="sn-mnav-b">
         <Link className="sn-mnav-l" href={L('')}>{t('Accueil', 'Home')}</Link>
+        <details><summary>{t('À propos', 'About us')}<Icon name="chev" /></summary><ul>
+          <li><Link href={L('/societe')}>{t('Mot de la Direction', 'A word from management')}</Link></li>
+          <li><Link href={L('/societe/implantation')}>{t('Implantation & Groupe', 'Network & Group')}</Link></li>
+          <li><Link href={L('/societe/qualite')}>{t('Qualité & hygiène', 'Quality & hygiene')}</Link></li>
+          <li><Link href={L('/societe/histoire')}>{t('Notre histoire', 'Our history')}</Link></li></ul></details>
         <details open><summary>{t('Produits', 'Products')}<Icon name="chev" /></summary><ul>
           {universes.map((u) => <li key={u.slug}><Link href={L(`/univers/${u.slug}`)}>{l === 'en' ? u.name.en : u.name.fr}</Link></li>)}
           <li><Link href={L('/cles-en-main')}>{t('Supérettes clés en main', 'Turnkey mini-markets')}</Link></li></ul></details>
         <details><summary>Services<Icon name="chev" /></summary><ul>
           <li><Link href={L('/conseil')}>{t('Conseil & assistance métier', 'Business advice & support')}</Link></li>
           <li><Link href={L('/societe/grands-comptes')}>{t('Grands comptes', 'Key accounts')}</Link></li></ul></details>
-        <details><summary>{t('La société', 'Company')}<Icon name="chev" /></summary><ul>
-          <li><Link href={L('/societe')}>{t('Mot de la Direction', 'A word from management')}</Link></li>
-          <li><Link href={L('/societe/implantation')}>{t('Implantation & Groupe', 'Network & Group')}</Link></li>
-          <li><Link href={L('/societe/qualite')}>{t('Qualité & hygiène', 'Quality & hygiene')}</Link></li>
-          <li><Link href={L('/societe/histoire')}>{t('Notre histoire', 'Our history')}</Link></li></ul></details>
         <Link className="sn-mnav-l" href={L('/catalogue')}>{t('Commande pro', 'Pro ordering')}</Link>
         <Link className="sn-mnav-l" href={L('/actualites')}>{t('Actualités', 'News')}</Link>
         <Link className="sn-mnav-l" href={L('/contact')}>Contact</Link>

@@ -22,7 +22,7 @@ export function CompanyPage({ locale: l, section }: { locale: Locale; section: S
     <>
       <PageHero locale={l} img={img('entrepot')} icon="building" title={section === '' ? t('Qui sommes-nous', 'About us') : label}
         lede={t('Filiale du Groupe COSEMAD, FLS approvisionne depuis la Médina les professionnels de l’alimentation dans tout le Sénégal.', 'A COSEMAD Group company, FLS supplies food professionals across Senegal from its Médina base.')}
-        crumbs={section === '' ? [[null, t('La société', 'Company')]] : [['/societe', t('La société', 'Company')], [null, label]]} />
+        crumbs={section === '' ? [[null, t('À propos', 'About us')]] : [['/societe', t('À propos', 'About us')], [null, label]]} />
       <div className="sn-subnav"><div className="sn-wrap"><nav className="sn-tabs" aria-label={t('Rubriques de la société', 'Company sections')}>
         {SECTIONS.map((s) => <Link key={s} className="sn-tab" href={`/${l}/societe${s ? `/${s}` : ''}`} aria-current={s === section ? 'page' : undefined} style={s === section ? { color: 'var(--sn-navy-9)', borderBottomColor: 'var(--sn-green)', textDecoration: 'none' } : { textDecoration: 'none' }}>{sectionLabel(l, s)}</Link>)}
       </nav></div></div>
