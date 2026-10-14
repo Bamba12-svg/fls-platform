@@ -1,5 +1,5 @@
 /* Back-office FLS : interface dense et lisible, préfixe sn- (cahier des charges) */
-:root{--sn-navy:#0A4A2A;--sn-navy-9:#10241A;--sn-green:#006633;--sn-green-50:#E7F1EB;--sn-ink:#1b2420;--sn-muted:#5B655F;--sn-line:#E1E6E2;--sn-bg:#F5F7F6;--sn-warn:#B25E00;--sn-red:#B42318;--sn-r:10px}
+:root{--sn-navy:#0A4A2A;--sn-navy-9:#10241A;--sn-green:#097646;--sn-green-50:#E6F2EC;--sn-ink:#1b2420;--sn-muted:#5B655F;--sn-line:#E1E6E2;--sn-bg:#F5F7F6;--sn-warn:#B25E00;--sn-red:#B42318;--sn-r:10px}
 *{box-sizing:border-box}html,body{margin:0}
 body{font-family:'Figtree Variable',system-ui,sans-serif;color:var(--sn-ink);background:var(--sn-bg);font-size:14.5px;line-height:1.5}
 a{color:var(--sn-navy)}h1,h2,h3{color:var(--sn-navy-9);margin:0;line-height:1.2}h1{font-size:1.6rem;font-weight:800}h2{font-size:1.1rem}

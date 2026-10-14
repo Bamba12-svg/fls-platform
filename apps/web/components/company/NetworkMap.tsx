@@ -29,8 +29,8 @@ export function NetworkMap({ children }: { children?: React.ReactNode }) {
           {CITIES.slice(1).map((ct) => { const [x, y] = proj(ct); const mx = (hx + x) / 2, my = (hy + y) / 2 - Math.hypot(x - hx, y - hy) * 0.18; return <path key={ct.n} d={`M${hx} ${hy} Q${mx} ${my} ${x} ${y}`} fill="none" stroke="#0A4A2A" strokeOpacity={0.35} strokeWidth={1.5} strokeDasharray="4 5" className="sn-route" />; })}
           {CITIES.map((ct, k) => { const [x, y] = proj(ct); const ond = /commande/.test(ct.f.fr); return (
             <g key={ct.n} className="sn-city" tabIndex={0} role="button" aria-label={ct.n} aria-pressed={k === i} onClick={() => setI(k)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setI(k); } }}>
-              <circle cx={x} cy={y} r={ct.hub ? 11 : 7} fill={ct.hub ? '#006633' : ond ? '#fff' : '#0A4A2A'} stroke={ct.hub ? '#E7F1EB' : '#0A4A2A'} strokeWidth={ct.hub ? 5 : 2} strokeDasharray={ond ? '3 2' : undefined} />
-              {ct.hub && <circle cx={x} cy={y} r={20} fill="none" stroke="#006633" strokeOpacity={0.3}><animate attributeName="r" values="12;26;12" dur="3s" repeatCount="indefinite" /><animate attributeName="stroke-opacity" values=".5;0;.5" dur="3s" repeatCount="indefinite" /></circle>}
+              <circle cx={x} cy={y} r={ct.hub ? 11 : 7} fill={ct.hub ? '#097646' : ond ? '#fff' : '#0A4A2A'} stroke={ct.hub ? '#E6F2EC' : '#0A4A2A'} strokeWidth={ct.hub ? 5 : 2} strokeDasharray={ond ? '3 2' : undefined} />
+              {ct.hub && <circle cx={x} cy={y} r={20} fill="none" stroke="#097646" strokeOpacity={0.3}><animate attributeName="r" values="12;26;12" dur="3s" repeatCount="indefinite" /><animate attributeName="stroke-opacity" values=".5;0;.5" dur="3s" repeatCount="indefinite" /></circle>}
               <text x={x + (ct.hub ? -16 : 11)} y={y + (ct.hub ? 28 : 4)} fontSize={ct.hub ? 14 : 12} fontWeight={ct.hub ? 800 : 600} fill="#10241A" fontFamily="Figtree Variable,sans-serif">{ct.n}</text>
             </g>); })}
         </svg>

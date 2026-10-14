@@ -48,7 +48,7 @@
 @media (max-width:1200px){ .sn-util-hours{display:none} .sn-menu > li > a,.sn-menu > li > button{padding:10px 7px;font-size:.88rem} }
 
 /* ===== Charte FLS : vert + jaune (aucun bleu) ===== */
-:root{--sn-yellow:#F5CF14;--sn-yellow-d:#E0B800;--sn-yellow-50:#FFF8D6;--sn-yellow-100:#FDEB9C}
+:root{--sn-yellow:#d5cb30;--sn-yellow-d:#bfb427;--sn-yellow-50:#FAF8DE;--sn-yellow-100:#F1ECB0}
 .sn-util{background:var(--sn-yellow);color:var(--sn-navy-9)}
 .sn-util-i svg{opacity:1;color:var(--sn-green)}
 .sn-util a{color:inherit}

@@ -26,9 +26,9 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     metadataBase: new URL(SITE_URL),
     title: { default: t('FLS · Distribution alimentaire B2B au Sénégal', 'FLS · B2B food distribution in Senegal'), template: '%s · FLS' },
-    description: t('Fourniture Libre Service (Groupe COSEMAD) : épicerie, boissons, frais et surgelés livrés aux grossistes, supérettes et restaurants du Sénégal. Commande pro en ligne 24 h/24.', 'Fourniture Libre Service (COSEMAD Group): groceries, beverages, fresh and frozen food delivered to wholesalers, mini-markets and restaurants across Senegal. 24/7 online trade ordering.'),
+    description: t('Fournisseur Libre Service (Groupe COSEMAD) : épicerie, boissons, frais et surgelés livrés aux grossistes, supérettes et restaurants du Sénégal. Commande pro en ligne 24 h/24.', 'Fournisseur Libre Service (COSEMAD Group): groceries, beverages, fresh and frozen food delivered to wholesalers, mini-markets and restaurants across Senegal. 24/7 online trade ordering.'),
     alternates: alternates(l),
-    openGraph: { type: 'website', siteName: 'FLS · Fourniture Libre Service', locale: l === 'en' ? 'en_GB' : 'fr_SN', images: ['/img/f-sup-rayons.webp'] },
+    openGraph: { type: 'website', siteName: 'FLS · Fournisseur Libre Service', locale: l === 'en' ? 'en_GB' : 'fr_SN', images: ['/img/f-sup-rayons.webp'] },
     icons: { icon: '/favicon.svg' },
   };
 }
@@ -40,7 +40,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const nav: NavUniverse[] = universes.map((u) => ({ slug: u.slug, name: u.name, icon: UNIVERSE_ICON[u.slug] ?? 'box', subs: u.subcategories.map((s) => ({ slug: s.slug, name: s.name })) }));
   const org = {
     '@context': 'https://schema.org', '@graph': [
-      { '@type': 'Organization', '@id': `${SITE_URL}/#org`, name: 'Fourniture Libre Service (FLS)', url: SITE_URL, logo: `${SITE_URL}/favicon.svg`, parentOrganization: { '@type': 'Organization', name: 'Groupe COSEMAD' }, email: 'fls@cosemad.sn', telephone: '+221338890666' },
+      { '@type': 'Organization', '@id': `${SITE_URL}/#org`, name: 'Fournisseur Libre Service (FLS)', url: SITE_URL, logo: `${SITE_URL}/img/fls-logo.svg`, parentOrganization: { '@type': 'Organization', name: 'Groupe COSEMAD' }, email: 'fls@cosemad.sn', telephone: '+221338890666' },
       { '@type': 'WholesaleStore', '@id': `${SITE_URL}/#depot`, name: 'FLS · Dépôt de la Médina', image: `${SITE_URL}/img/entrepot.webp`, telephone: '+221338890666', priceRange: 'FCFA',
         address: { '@type': 'PostalAddress', streetAddress: 'Rue 39 x 22, Médina', addressLocality: 'Dakar', addressCountry: 'SN' }, geo: { '@type': 'GeoCoordinates', latitude: 14.6835, longitude: -17.4486 },
         openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '07:30', closes: '19:00' }] },

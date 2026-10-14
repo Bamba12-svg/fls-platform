@@ -1,3 +1,4 @@
+import { FlsMark } from '@/components/FlsMark';
 import type { ReactNode } from 'react';
 import { getRepo } from '@fls/db';
 import { Nav } from '@/components/Nav';
@@ -25,7 +26,7 @@ export default async function BoLayout({ children }: { children: ReactNode }) {
   return (
     <div className="sn-shell">
       <aside className="sn-side">
-        <div className="sn-brand"><svg viewBox="0 0 64 64" width={34} height={34} aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0E7745" /><text x="32" y="45" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontWeight={900} fontSize={34} fill="#DCCB2E">F</text></svg><div>Back-office FLS<small>fls.sn/admin-fls</small></div></div>
+        <div className="sn-brand"><FlsMark size={34} /><div>Back-office FLS<small>fls.sn/admin-fls</small></div></div>
         <Nav items={all.filter((i) => can(s.role, i.area)).map(({ area: _a, ...i }) => i)} />
         <div className="sn-me"><b>{s.name}</b>{ROLE[s.role]} · {s.email}
           <form action={logout} style={{ marginTop: 10 }}><button className="sn-btn line sm" type="submit">Se déconnecter</button></form>

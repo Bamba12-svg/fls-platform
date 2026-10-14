@@ -1,6 +1,6 @@
 # FLS · Plateforme web (site + back-office)
 
-Refonte de **fls.sn** pour Fourniture Libre Service (Groupe COSEMAD), conforme au cahier des charges :
+Refonte de **fls.sn** pour Fournisseur Libre Service (Groupe COSEMAD), conforme au cahier des charges :
 Next.js 14 (App Router) · TypeScript strict · Turborepo + pnpm · Tailwind (préfixe `sn-`) · PostgreSQL (Neon) via Prisma · NextAuth · back-office sur `/admin-fls`.
 
 ```

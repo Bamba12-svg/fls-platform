@@ -25,7 +25,7 @@ export function FoodCostCalculator() {
           <div className="sn-fld"><label htmlFor="sn-cc">{t('Coût des ingrédients par menu', 'Ingredient cost per menu')} : <b className="sn-num">{money(cost)}</b></label><input className="sn-range" type="range" id="sn-cc" min={200} max={5000} step={50} value={cost} onChange={(e) => setCost(+e.target.value)} /></div>
         </div></div>
       <div>
-        <div className="sn-gauge"><svg viewBox="0 0 300 180" role="img" aria-label={`${t('Coût matière', 'Food cost')} ${nf(pct)} %`}>{arc(0, 75, '#CFE4D7')}{arc(75, 105, '#006633')}{arc(105, 180, '#F3D9A4')}
+        <div className="sn-gauge"><svg viewBox="0 0 300 180" role="img" aria-label={`${t('Coût matière', 'Food cost')} ${nf(pct)} %`}>{arc(0, 75, '#CCE5D8')}{arc(75, 105, '#097646')}{arc(105, 180, '#F3D9A4')}
           <line x1={150} y1={160} x2={150 + 105 * Math.cos(rad)} y2={160 - 105 * Math.sin(rad)} stroke="#10241A" strokeWidth={4} strokeLinecap="round" style={{ transition: 'all .3s' }} /><circle cx={150} cy={160} r={8} fill="#10241A" />
           <text x={22} y={178} fontSize={11} fill="#5B655F" fontFamily="Sora,sans-serif">0 %</text><text x={252} y={178} fontSize={11} fill="#5B655F" fontFamily="Sora,sans-serif">60 %</text></svg>
           <div className="sn-gauge-v" aria-live="polite"><b>{nf(pct)} %</b><span style={{ color: ok ? 'var(--sn-green)' : hi ? 'var(--sn-warn)' : 'var(--sn-navy)' }}>{ok ? t('Dans la cible', 'On target') : hi ? t('Au-dessus de la cible', 'Above target') : t('Sous la cible', 'Below target')}</span></div></div>

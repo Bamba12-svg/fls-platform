@@ -13,7 +13,7 @@ export function Footer({ locale, universes }: { locale: Locale; universes: Unive
           <div>
             <Logo locale={locale} light />
             <p className="sn-foot-about"><b style={{ display: 'block', color: '#fff', marginBottom: 6 }}>{t('Des produits adaptés à vos besoins.', 'Products suited to your needs.')}</b>
-              {t('Fourniture Libre Service distribue l’épicerie, les boissons, le frais et le surgelé auprès des grossistes, demi-grossistes, supérettes et restaurants du Sénégal.', 'Fourniture Libre Service distributes groceries, beverages, fresh and frozen food to wholesalers, mini-markets and restaurants across Senegal.')}</p>
+              {t('Fournisseur Libre Service distribue l’épicerie, les boissons, le frais et le surgelé auprès des grossistes, demi-grossistes, supérettes et restaurants du Sénégal.', 'Fournisseur Libre Service distributes groceries, beverages, fresh and frozen food to wholesalers, mini-markets and restaurants across Senegal.')}</p>
           </div>
           <div><h4>{t('À propos', 'About us')}</h4><ul>
             <li><Link href={L('/societe')}>{t('Mot de la Direction', 'A word from management')}</Link></li>

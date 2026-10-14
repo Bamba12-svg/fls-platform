@@ -20,7 +20,7 @@ function StreetMap({ label }: { label: string }) {
       {Array.from({ length: 4 }, (_, j) => <line key={`h${j}`} x1={10} y1={30 + j * 55} x2={410} y2={30 + j * 55} stroke={j === 2 ? '#0A4A2A' : '#D5DDD7'} strokeWidth={j === 2 ? 6 : 10} strokeLinecap="round" />)}
       <text x={X + 8} y={22} fontSize={11} fontWeight={700} fill="#0A4A2A" fontFamily="Figtree Variable,sans-serif">Rue 39</text>
       <text x={16} y={Y - 9} fontSize={11} fontWeight={700} fill="#0A4A2A" fontFamily="Figtree Variable,sans-serif">Rue 22</text>
-      <g transform={`translate(${X} ${Y})`}><circle r={22} fill="#006633" fillOpacity={0.15} /><path d="M0 -4 C0 -18 -12 -18 -12 -28 a12 12 0 0 1 24 0 c0 10 -12 10 -12 24Z" fill="#006633" transform="translate(0 4)" /><circle cy={-24} r={4.5} fill="#fff" /></g>
+      <g transform={`translate(${X} ${Y})`}><circle r={22} fill="#097646" fillOpacity={0.15} /><path d="M0 -4 C0 -18 -12 -18 -12 -28 a12 12 0 0 1 24 0 c0 10 -12 10 -12 24Z" fill="#097646" transform="translate(0 4)" /><circle cy={-24} r={4.5} fill="#fff" /></g>
       <rect x={X + 14} y={Y + 10} width={58} height={22} rx={6} fill="#10241A" /><text x={X + 43} y={Y + 25} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle" fontFamily="Figtree Variable,sans-serif">FLS</text>
     </svg>
   );

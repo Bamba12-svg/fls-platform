@@ -6,12 +6,12 @@ export const ansi = (s: string) => s.replace(/[  ]/g, ' ').replace(/[’‘]/
 const money = (x: number) => `${new Intl.NumberFormat('fr-FR').format(Math.round(x)).replace(/[  ]/g, ' ')} F CFA`;
 
 export async function newDoc(title: string) {
-  const doc = await PDFDocument.create(); doc.setTitle(title); doc.setAuthor('Fourniture Libre Service (FLS)'); doc.setCreator('fls.sn');
+  const doc = await PDFDocument.create(); doc.setTitle(title); doc.setAuthor('Fournisseur Libre Service (FLS)'); doc.setCreator('fls.sn');
   const page = doc.addPage([595.28, 841.89]);
   const font = await doc.embedFont(StandardFonts.Helvetica); const bold = await doc.embedFont(StandardFonts.HelveticaBold);
   // En-tête : logo FLS stylisé
   [0, 1, 2].forEach((i) => { const x = 40 + i * 22; page.drawRectangle({ x, y: 778, width: 18, height: 30, color: rgb(0.055, 0.467, 0.27) }); page.drawText('FLS'[i]!, { x: x + 4, y: 786, size: 16, font: bold, color: rgb(0.86, 0.8, 0.18) }); });
-  page.drawText('Fourniture Libre Service', { x: 112, y: 796, size: 12, font: bold, color: NAVY });
+  page.drawText('Fournisseur Libre Service', { x: 112, y: 796, size: 12, font: bold, color: NAVY });
   page.drawText(ansi('Groupe COSEMAD · Sénégal, Dakar, Médina, Rue 39 x 22 · +221 33 889 06 66 · fls@cosemad.sn'), { x: 112, y: 782, size: 8, font, color: MUTED });
   page.drawLine({ start: { x: 40, y: 765 }, end: { x: 555, y: 765 }, thickness: 1, color: LINE });
   return { doc, page, font, bold };

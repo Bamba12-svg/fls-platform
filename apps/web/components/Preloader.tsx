@@ -30,7 +30,7 @@ export function Preloader() {
     <div id="sn-loader" className={done ? 'sn-ld-done' : undefined} aria-hidden="true">
       <div className="sn-ld-track"><div className="sn-ld-row">{Array.from({ length: 8 }, (_, i) => <LogoMark key={i} height={58} />)}</div></div>
       <div className="sn-ld-bar"><i /></div>
-      <span className="sn-ld-tx">Fourniture Libre Service</span>
+      <span className="sn-ld-tx">Fournisseur Libre Service</span>
     </div>
   );
 }
