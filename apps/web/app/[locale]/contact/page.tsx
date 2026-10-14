@@ -46,10 +46,10 @@ export default async function Contact({ params, searchParams }: { params: { loca
         </div>
         <div>
           <div className="sn-card-c"><h3>{t('Siège et dépôt', 'Head office and depot')}</h3>
-            <div className="sn-ci"><i><Icon name="pin" /></i><div><b>Rue 39 x 22, Médina</b><span>{t('En face du Collège Jean de la Fontaine, Dakar', 'Opposite Collège Jean de la Fontaine, Dakar')}</span></div></div>
+            <div className="sn-ci"><i><Icon name="pin" /></i><div><b>{t('Sénégal, Dakar, Médina', 'Senegal, Dakar, Médina')}</b><span>{t('Rue 39 x 22, en face du Collège Jean de la Fontaine', 'Rue 39 x 22, opposite Collège Jean de la Fontaine')}</span></div></div>
             <div className="sn-ci"><i><Icon name="phone" /></i><div><b>{t('Service commercial', 'Sales')}</b><span><a href="tel:+221338890666">+221 33 889 06 66</a><br /><a href="tel:+221786301010">+221 78 630 10 10</a></span></div></div>
             <div className="sn-ci"><i><Icon name="mail" /></i><div><b>E-mail</b><span><a href="mailto:fls@cosemad.sn">fls@cosemad.sn</a></span></div></div>
-            <div className="sn-ci"><i><Icon name="clock" /></i><div><b>{t('Horaires du dépôt', 'Depot hours')}</b><span>{t('Lundi–samedi, 7 h 30–19 h', 'Monday–Saturday, 7:30am–7pm')}</span></div></div>
+            <div className="sn-ci"><i><Icon name="clock" /></i><div><b>{t('Horaires du dépôt', 'Depot hours')}</b><span>{t('Du lundi au samedi, de 7 h 30 à 19 h', 'Monday to Saturday, 7:30am to 7pm')}</span></div></div>
             <a className="sn-btn sn-btn-glass" href={mapQ} target="_blank" rel="noopener"><Icon name="pin" />{t('Itinéraire Google Maps', 'Google Maps directions')}</a>
           </div>
           <div className="sn-street"><StreetMap label={t('Plan : intersection rue 39 et rue 22, Médina', 'Map: corner of Rue 39 and Rue 22, Médina')} /></div>

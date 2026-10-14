@@ -45,10 +45,10 @@ export function Header({ universes }: { universes: NavUniverse[] }) {
     <header className={`sn-top ${stuck ? 'sn-is-stuck' : ''}`} onMouseLeave={() => hoverMenu(null)}>
       <div className="sn-util"><div className="sn-wrap">
         <span className="sn-util-i"><Icon name="phone" /><span>+221 33 889 06 66</span></span>
-        <span className="sn-util-i sn-util-hide"><Icon name="pin" /><span>{t('Siège : Médina, Rue 39 x 22, Dakar', 'Head office: Médina, Rue 39 x 22, Dakar')}</span></span>
-        <span className="sn-util-i sn-util-hide"><Icon name="clock" /><span>{t('Dépôt ouvert lun.–sam. 7 h 30–19 h', 'Depot open Mon–Sat 7:30am–7pm')}</span></span>
+        <span className="sn-util-i sn-util-hide"><Icon name="pin" /><span>{t('Siège : Sénégal, Dakar, Médina, Rue 39 x 22', 'Head office: Senegal, Dakar, Médina, Rue 39 x 22')}</span></span>
+        <span className="sn-util-i sn-util-hide sn-util-hours"><Icon name="clock" /><span>{t('Dépôt ouvert du lundi au samedi, de 7 h 30 à 19 h', 'Depot open Monday to Saturday, 7:30am to 7pm')}</span></span>
         <span className="sn-util-sp" />
-        <span className="sn-util-i sn-util-hide">{t('Groupe COSEMAD', 'COSEMAD Group')}</span>
+        <span className="sn-util-i sn-util-hide sn-util-grp">{t('Groupe COSEMAD', 'COSEMAD Group')}</span>
         <span className="sn-seg" role="group" aria-label={t('Devise', 'Currency')}>
           <button type="button" aria-pressed={cur === 'XOF'} onClick={() => setCur('XOF')}>FCFA</button>
           <button type="button" aria-pressed={cur === 'EUR'} onClick={() => setCur('EUR')}>EUR</button>
@@ -63,6 +63,7 @@ export function Header({ universes }: { universes: NavUniverse[] }) {
         <Logo locale={l} />
         <nav aria-label={t('Navigation principale', 'Main navigation')}>
           <ul className="sn-menu">
+            <li onMouseEnter={() => hoverMenu(null)}><Link href={L('')} aria-current={path === L('') ? 'page' : undefined}>{t('Accueil', 'Home')}</Link></li>
             <li><button type="button" aria-expanded={menu === 'prod'} aria-controls="sn-mega" onClick={() => toggle('prod')} onMouseEnter={() => hoverMenu('prod')}>{t('Produits', 'Products')}<Icon name="chev" /></button></li>
             <li><button type="button" aria-expanded={menu === 'svc'} aria-controls="sn-mega-svc" onClick={() => toggle('svc')} onMouseEnter={() => hoverMenu('svc')}>{t('Services', 'Services')}<Icon name="chev" /></button></li>
             <li onMouseEnter={() => hoverMenu(null)}><Link href={L('/catalogue')} aria-current={active('/catalogue')}>{t('Commande pro', 'Pro ordering')}</Link></li>
@@ -132,6 +133,7 @@ export function MobileNav({ universes }: { universes: NavUniverse[] }) {
     <div className={`sn-mnav ${open ? 'sn-open' : ''}`} role="dialog" aria-modal="true" aria-label="Menu" aria-hidden={!open} {...(open ? {} : ({ inert: '' } as unknown as { inert: boolean }))}>
       <div className="sn-mnav-h"><Logo locale={l} sub={false} /><button className="sn-close" type="button" onClick={ui.close} aria-label={t('Fermer le menu', 'Close menu')}><Icon name="close" /></button></div>
       <div className="sn-mnav-b">
+        <Link className="sn-mnav-l" href={L('')}>{t('Accueil', 'Home')}</Link>
         <details open><summary>{t('Produits', 'Products')}<Icon name="chev" /></summary><ul>
           {universes.map((u) => <li key={u.slug}><Link href={L(`/univers/${u.slug}`)}>{l === 'en' ? u.name.en : u.name.fr}</Link></li>)}
           <li><Link href={L('/cles-en-main')}>{t('Supérettes clés en main', 'Turnkey mini-markets')}</Link></li></ul></details>

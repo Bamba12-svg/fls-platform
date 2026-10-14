@@ -42,3 +42,7 @@
 .sn-drawer:not(.sn-open){box-shadow:none;visibility:hidden;transition:transform .35s var(--sn-ease),visibility 0s linear .35s}
 .sn-mega-desc{margin:-4px 0 8px 38px;font-size:.82rem;color:var(--sn-muted);line-height:1.4}
 .sn-mega-feat-svc h4{margin-top:4px}
+/* Barre de navigation : 7 entrées (Accueil inclus) sans débordement entre 1025 et 1440 px */
+@media (max-width:1400px){ .sn-util-grp{display:none} .sn-nav{gap:16px} .sn-menu > li > a,.sn-menu > li > button{padding:10px 9px} }
+@media (max-width:1320px){ .sn-nav .sn-logo-tx{display:none} }
+@media (max-width:1200px){ .sn-util-hours{display:none} .sn-menu > li > a,.sn-menu > li > button{padding:10px 7px;font-size:.88rem} }
