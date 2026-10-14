@@ -22,6 +22,10 @@
      1
     ],
     [
+     "Maria",
+     1
+    ],
+    [
      "Serene",
      0
     ],
@@ -260,8 +264,8 @@
     "en": "Canned goods & condiments"
    },
    "d": {
-    "fr": "Tomate, légumes, poisson en conserve, sauces et assaisonnements en formats ménagers et professionnels.",
-    "en": "Tomato, vegetables, canned fish, sauces and seasonings in retail and catering sizes."
+    "fr": "Gamme Maria (conserves de légumes et de fruits, sauces, condiments), tomate et poisson en conserve, en formats ménagers et professionnels.",
+    "en": "The Maria range (canned vegetables and fruit, sauces, condiments), tomato and canned fish, in retail and catering sizes."
    },
    "vol": {
     "v": "1,1 M+",
@@ -288,6 +292,34 @@
    ],
    "subs": [
     [
+     "legumes",
+     {
+      "fr": "Conserves de légumes",
+      "en": "Canned vegetables"
+     }
+    ],
+    [
+     "fruits",
+     {
+      "fr": "Conserves de fruits",
+      "en": "Canned fruit"
+     }
+    ],
+    [
+     "sauces",
+     {
+      "fr": "Sauces",
+      "en": "Sauces"
+     }
+    ],
+    [
+     "condiments",
+     {
+      "fr": "Condiments",
+      "en": "Condiments"
+     }
+    ],
+    [
      "tomate",
      {
       "fr": "Tomate",
@@ -295,24 +327,10 @@
      }
     ],
     [
-     "legumes",
-     {
-      "fr": "Légumes",
-      "en": "Vegetables"
-     }
-    ],
-    [
      "poisson",
      {
       "fr": "Poisson",
       "en": "Fish"
-     }
-    ],
-    [
-     "sauces",
-     {
-      "fr": "Sauces & assaisonnements",
-      "en": "Sauces & seasoning"
      }
     ]
    ]
@@ -1289,58 +1307,10 @@
    "vis": "sg-cr1"
   },
   {
-   "code": "CO-TC22",
-   "slug": "concentre-tomate-2-2kg",
-   "nameFr": "Concentré de tomate 2,2 kg",
-   "nameEn": "Tomato paste 2.2 kg",
-   "brand": "Tomatissimo",
-   "universe": "conserves",
-   "sub": "tomate",
-   "packFr": "Carton 6 × 2,2 kg",
-   "packEn": "Case 6 × 2.2 kg",
-   "upc": 6,
-   "cpp": 80,
-   "base": 19800,
-   "stock": 450,
-   "flag": "",
-   "sectors": [
-    "re",
-    "gr"
-   ],
-   "allergens": [],
-   "halal": true,
-   "origin": "Italie",
-   "vis": "co-tc22"
-  },
-  {
-   "code": "CO-TC07",
-   "slug": "concentre-tomate-70g",
-   "nameFr": "Concentré de tomate 70 g",
-   "nameEn": "Tomato paste 70 g",
-   "brand": "Tomatissimo",
-   "universe": "conserves",
-   "sub": "tomate",
-   "packFr": "Carton 50 × 70 g",
-   "packEn": "Case 50 × 70 g",
-   "upc": 50,
-   "cpp": 100,
-   "base": 9800,
-   "stock": 900,
-   "flag": "deal",
-   "sectors": [
-    "su",
-    "gr"
-   ],
-   "allergens": [],
-   "halal": true,
-   "origin": "Italie",
-   "vis": "co-tc07"
-  },
-  {
    "code": "CO-PP8",
    "slug": "petits-pois-maria-4-4",
-   "nameFr": "Petits pois extra-fins Maria 4/4",
-   "nameEn": "Maria extra-fine peas 4/4",
+   "nameFr": "Petits pois fins Maria 4/4",
+   "nameEn": "Maria fine peas 4/4",
    "brand": "Maria",
    "universe": "conserves",
    "sub": "legumes",
@@ -1383,31 +1353,6 @@
    "halal": true,
    "origin": "Espagne",
    "vis": "corn"
-  },
-  {
-   "code": "CO-OL9",
-   "slug": "olives-vertes-maria",
-   "nameFr": "Olives vertes dénoyautées Maria",
-   "nameEn": "Maria pitted green olives",
-   "brand": "Maria",
-   "universe": "conserves",
-   "sub": "legumes",
-   "packFr": "Carton 12 × 900 g bocal",
-   "packEn": "Case 12 × 900 g jar",
-   "upc": 12,
-   "cpp": 80,
-   "base": 21600,
-   "stock": 220,
-   "flag": "new",
-   "sectors": [
-    "re",
-    "ff",
-    "su"
-   ],
-   "allergens": [],
-   "halal": true,
-   "origin": "Espagne",
-   "vis": "olives"
   },
   {
    "code": "CO-MC8",
@@ -1459,78 +1404,6 @@
    "vis": "beans"
   },
   {
-   "code": "CO-AN8",
-   "slug": "ananas-tranches-maria",
-   "nameFr": "Ananas en morceaux Maria 4/4",
-   "nameEn": "Maria pineapple pieces 4/4",
-   "brand": "Maria",
-   "universe": "conserves",
-   "sub": "legumes",
-   "packFr": "Carton 12 × 820 g",
-   "packEn": "Case 12 × 820 g",
-   "upc": 12,
-   "cpp": 100,
-   "base": 13800,
-   "stock": 150,
-   "flag": "",
-   "sectors": [
-    "re",
-    "su"
-   ],
-   "allergens": [],
-   "halal": true,
-   "origin": "Thaïlande",
-   "vis": "pineapple"
-  },
-  {
-   "code": "CO-CN35",
-   "slug": "cornichons-extra-fins-maria",
-   "nameFr": "Cornichons extra-fins Maria 350 g",
-   "nameEn": "Maria extra-fine gherkins 350 g",
-   "brand": "Maria",
-   "universe": "conserves",
-   "sub": "legumes",
-   "packFr": "Carton 12 × 350 g bocal",
-   "packEn": "Case 12 × 350 g jar",
-   "upc": 12,
-   "cpp": 100,
-   "base": 14400,
-   "stock": 160,
-   "flag": "new",
-   "sectors": [
-    "re",
-    "ff",
-    "su"
-   ],
-   "allergens": [],
-   "halal": true,
-   "origin": "Espagne",
-   "vis": "cornichons"
-  },
-  {
-   "code": "CO-OB36",
-   "slug": "petits-oignons-blancs-maria",
-   "nameFr": "Petits oignons blancs Maria 360 g",
-   "nameEn": "Maria small white onions 360 g",
-   "brand": "Maria",
-   "universe": "conserves",
-   "sub": "legumes",
-   "packFr": "Carton 12 × 360 g bocal",
-   "packEn": "Case 12 × 360 g jar",
-   "upc": 12,
-   "cpp": 100,
-   "base": 13200,
-   "stock": 90,
-   "flag": "",
-   "sectors": [
-    "re"
-   ],
-   "allergens": [],
-   "halal": true,
-   "origin": "Espagne",
-   "vis": "oignons"
-  },
-  {
    "code": "CO-HB4",
    "slug": "haricots-blancs-maria-400g",
    "nameFr": "Haricots blancs Maria 400 g",
@@ -1552,59 +1425,104 @@
    "allergens": [],
    "halal": true,
    "origin": "Italie",
-   "vis": "poischiches"
+   "vis": "ma-haricots-blancs"
   },
   {
-   "code": "CO-SA12",
-   "slug": "sardines-huile-125g",
-   "nameFr": "Sardines à l’huile 125 g",
-   "nameEn": "Sardines in oil 125 g",
-   "brand": "Mer de Joal",
+   "code": "CO-AN8",
+   "slug": "ananas-tranches-maria",
+   "nameFr": "Ananas en morceaux au sirop léger Maria 4/4",
+   "nameEn": "Maria pineapple pieces in light syrup 4/4",
+   "brand": "Maria",
    "universe": "conserves",
-   "sub": "poisson",
-   "packFr": "Carton 50 × 125 g",
-   "packEn": "Case 50 × 125 g",
-   "upc": 50,
-   "cpp": 60,
-   "base": 23500,
-   "stock": 380,
+   "sub": "fruits",
+   "packFr": "Carton 12 × 820 g",
+   "packEn": "Case 12 × 820 g",
+   "upc": 12,
+   "cpp": 100,
+   "base": 13800,
+   "stock": 150,
    "flag": "",
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Thaïlande",
+   "vis": "pineapple"
+  },
+  {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "new",
+   "allergens": [],
+   "halal": true,
+   "code": "CO-FC8",
+   "slug": "cocktail-fruits-tropicaux-maria",
+   "nameFr": "Cocktail de fruits tropicaux au sirop léger Maria 4/4",
+   "nameEn": "Maria tropical fruit cocktail in light syrup 4/4",
+   "universe": "conserves",
+   "sub": "fruits",
+   "packFr": "Carton 12 × 820 g",
+   "packEn": "Case 12 × 820 g",
+   "upc": 12,
+   "cpp": 100,
+   "base": 14500,
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "origin": "Thaïlande",
+   "vis": "ma-cocktail-fruits"
+  },
+  {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "",
+   "allergens": [],
+   "halal": true,
+   "code": "CO-JA1",
+   "slug": "jus-ananas-maria-boite",
+   "nameFr": "Jus d’ananas Maria (boîte)",
+   "nameEn": "Maria pineapple juice (can)",
+   "universe": "conserves",
+   "sub": "fruits",
+   "packFr": "Carton 12 × 1 L boîte",
+   "packEn": "Case 12 × 1 L can",
+   "upc": 12,
+   "cpp": 90,
+   "base": 10800,
    "sectors": [
     "su",
-    "gr"
+    "re"
    ],
-   "allergens": [
-    "poisson"
-   ],
-   "halal": true,
-   "origin": "Sénégal",
-   "vis": "co-sa12"
+   "origin": "Thaïlande",
+   "vis": "ma-jus-ananas-boite"
   },
   {
-   "code": "CO-TN17",
-   "slug": "thon-naturel-1-7kg",
-   "nameFr": "Thon au naturel 1,7 kg",
-   "nameEn": "Tuna in brine 1.7 kg",
-   "brand": "Mer de Joal",
-   "universe": "conserves",
-   "sub": "poisson",
-   "packFr": "Carton 6 × 1,7 kg",
-   "packEn": "Case 6 × 1.7 kg",
-   "upc": 6,
-   "cpp": 80,
-   "base": 45000,
-   "stock": 58,
+   "brand": "Maria",
+   "stock": 200,
    "flag": "",
+   "allergens": [],
+   "halal": true,
+   "code": "CO-CC33",
+   "slug": "coco-avec-pulpe-maria-330ml",
+   "nameFr": "Boisson coco avec pulpe Maria 330 ml",
+   "nameEn": "Maria coconut drink with pulp 330 ml",
+   "universe": "conserves",
+   "sub": "fruits",
+   "packFr": "Carton 24 × 330 ml",
+   "packEn": "Case 24 × 330 ml",
+   "upc": 24,
+   "cpp": 84,
+   "base": 12000,
    "sectors": [
+    "su",
     "ff",
     "re"
    ],
-   "allergens": [
-    "poisson"
-   ],
-   "halal": true,
-   "origin": "Sénégal",
-   "vis": "co-tn17"
+   "origin": "Thaïlande",
+   "vis": "ma-coco-pulpe"
   },
   {
    "code": "CO-MY5",
@@ -1683,6 +1601,31 @@
    "vis": "moutarde"
   },
   {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "",
+   "allergens": [],
+   "halal": true,
+   "code": "CO-VC15",
+   "slug": "vinaigre-colore-maria",
+   "nameFr": "Vinaigre coloré Maria 1,5 L",
+   "nameEn": "Maria coloured vinegar 1.5 L",
+   "universe": "conserves",
+   "sub": "sauces",
+   "packFr": "Carton 6 × 1,5 L",
+   "packEn": "Case 6 × 1.5 L",
+   "upc": 6,
+   "cpp": 100,
+   "base": 6000,
+   "sectors": [
+    "su",
+    "re",
+    "gr"
+   ],
+   "origin": "Sénégal",
+   "vis": "ma-vinaigre"
+  },
+  {
    "code": "CO-BC4",
    "slug": "bouillon-saveur-or-400g",
    "nameFr": "Bouillon cube Saveur d’Or 400 g",
@@ -1708,6 +1651,353 @@
    "halal": true,
    "origin": "Sénégal",
    "vis": "co-bc4"
+  },
+  {
+   "code": "CO-OL9",
+   "slug": "olives-vertes-maria",
+   "nameFr": "Olives vertes dénoyautées Maria",
+   "nameEn": "Maria pitted green olives",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "condiments",
+   "packFr": "Carton 12 × 900 g bocal",
+   "packEn": "Case 12 × 900 g jar",
+   "upc": 12,
+   "cpp": 80,
+   "base": 21600,
+   "stock": 220,
+   "flag": "new",
+   "sectors": [
+    "re",
+    "ff",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "olives"
+  },
+  {
+   "code": "CO-CN35",
+   "slug": "cornichons-extra-fins-maria",
+   "nameFr": "Cornichons extra-fins Maria 350 g",
+   "nameEn": "Maria extra-fine gherkins 350 g",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "condiments",
+   "packFr": "Carton 12 × 350 g bocal",
+   "packEn": "Case 12 × 350 g jar",
+   "upc": 12,
+   "cpp": 100,
+   "base": 14400,
+   "stock": 160,
+   "flag": "new",
+   "sectors": [
+    "re",
+    "ff",
+    "su"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "cornichons"
+  },
+  {
+   "code": "CO-OB36",
+   "slug": "petits-oignons-blancs-maria",
+   "nameFr": "Petits oignons blancs Maria 360 g",
+   "nameEn": "Maria small white onions 360 g",
+   "brand": "Maria",
+   "universe": "conserves",
+   "sub": "condiments",
+   "packFr": "Carton 12 × 360 g bocal",
+   "packEn": "Case 12 × 360 g jar",
+   "upc": 12,
+   "cpp": 100,
+   "base": 13200,
+   "stock": 90,
+   "flag": "",
+   "sectors": [
+    "re"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Espagne",
+   "vis": "oignons"
+  },
+  {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "",
+   "allergens": [],
+   "halal": true,
+   "code": "CO-OE7",
+   "slug": "olives-vertes-entieres-maria",
+   "nameFr": "Olives vertes entières Maria",
+   "nameEn": "Maria whole green olives",
+   "universe": "conserves",
+   "sub": "condiments",
+   "packFr": "Carton 12 × 700 g bocal",
+   "packEn": "Case 12 × 700 g jar",
+   "upc": 12,
+   "cpp": 80,
+   "base": 19800,
+   "sectors": [
+    "re",
+    "su"
+   ],
+   "origin": "Espagne",
+   "vis": "ma-olives-entieres"
+  },
+  {
+   "code": "CO-TC22",
+   "slug": "concentre-tomate-2-2kg",
+   "nameFr": "Concentré de tomate 2,2 kg",
+   "nameEn": "Tomato paste 2.2 kg",
+   "brand": "Tomatissimo",
+   "universe": "conserves",
+   "sub": "tomate",
+   "packFr": "Carton 6 × 2,2 kg",
+   "packEn": "Case 6 × 2.2 kg",
+   "upc": 6,
+   "cpp": 80,
+   "base": 19800,
+   "stock": 450,
+   "flag": "",
+   "sectors": [
+    "re",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Italie",
+   "vis": "co-tc22"
+  },
+  {
+   "code": "CO-TC07",
+   "slug": "concentre-tomate-70g",
+   "nameFr": "Concentré de tomate 70 g",
+   "nameEn": "Tomato paste 70 g",
+   "brand": "Tomatissimo",
+   "universe": "conserves",
+   "sub": "tomate",
+   "packFr": "Carton 50 × 70 g",
+   "packEn": "Case 50 × 70 g",
+   "upc": 50,
+   "cpp": 100,
+   "base": 9800,
+   "stock": 900,
+   "flag": "deal",
+   "sectors": [
+    "su",
+    "gr"
+   ],
+   "allergens": [],
+   "halal": true,
+   "origin": "Italie",
+   "vis": "co-tc07"
+  },
+  {
+   "code": "CO-SA12",
+   "slug": "sardines-huile-125g",
+   "nameFr": "Sardines à l’huile 125 g",
+   "nameEn": "Sardines in oil 125 g",
+   "brand": "Mer de Joal",
+   "universe": "conserves",
+   "sub": "poisson",
+   "packFr": "Carton 50 × 125 g",
+   "packEn": "Case 50 × 125 g",
+   "upc": 50,
+   "cpp": 60,
+   "base": 23500,
+   "stock": 380,
+   "flag": "",
+   "sectors": [
+    "su",
+    "gr"
+   ],
+   "allergens": [
+    "poisson"
+   ],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "co-sa12"
+  },
+  {
+   "code": "CO-TN17",
+   "slug": "thon-naturel-1-7kg",
+   "nameFr": "Thon au naturel 1,7 kg",
+   "nameEn": "Tuna in brine 1.7 kg",
+   "brand": "Mer de Joal",
+   "universe": "conserves",
+   "sub": "poisson",
+   "packFr": "Carton 6 × 1,7 kg",
+   "packEn": "Case 6 × 1.7 kg",
+   "upc": 6,
+   "cpp": 80,
+   "base": 45000,
+   "stock": 58,
+   "flag": "",
+   "sectors": [
+    "ff",
+    "re"
+   ],
+   "allergens": [
+    "poisson"
+   ],
+   "halal": true,
+   "origin": "Sénégal",
+   "vis": "co-tn17"
+  },
+  {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "new",
+   "allergens": [],
+   "halal": true,
+   "code": "MA-JM33",
+   "slug": "jus-maria-mangue",
+   "nameFr": "Jus Maria mangue avec morceaux de fruits",
+   "nameEn": "Maria mango juice with fruit pieces",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 24 canettes",
+   "packEn": "Case of 24 cans",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8400,
+   "sectors": [
+    "ff",
+    "su",
+    "re"
+   ],
+   "origin": "Importé",
+   "vis": "ma-jus-mangue"
+  },
+  {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "",
+   "allergens": [],
+   "halal": true,
+   "code": "MA-JO33",
+   "slug": "jus-maria-orange",
+   "nameFr": "Jus Maria orange avec morceaux de fruits",
+   "nameEn": "Maria orange juice with fruit pieces",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 24 canettes",
+   "packEn": "Case of 24 cans",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8400,
+   "sectors": [
+    "ff",
+    "su",
+    "re"
+   ],
+   "origin": "Importé",
+   "vis": "ma-jus-orange"
+  },
+  {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "",
+   "allergens": [],
+   "halal": true,
+   "code": "MA-JA33",
+   "slug": "jus-maria-ananas",
+   "nameFr": "Jus Maria ananas avec morceaux de fruits",
+   "nameEn": "Maria pineapple juice with fruit pieces",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 24 canettes",
+   "packEn": "Case of 24 cans",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8400,
+   "sectors": [
+    "ff",
+    "su",
+    "re"
+   ],
+   "origin": "Importé",
+   "vis": "ma-jus-ananas"
+  },
+  {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "",
+   "allergens": [],
+   "halal": true,
+   "code": "MA-JG33",
+   "slug": "jus-maria-goyave",
+   "nameFr": "Jus Maria goyave avec morceaux de fruits",
+   "nameEn": "Maria guava juice with fruit pieces",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 24 canettes",
+   "packEn": "Case of 24 cans",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8400,
+   "sectors": [
+    "ff",
+    "su",
+    "re"
+   ],
+   "origin": "Importé",
+   "vis": "ma-jus-goyave"
+  },
+  {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "",
+   "allergens": [],
+   "halal": true,
+   "code": "MA-JF33",
+   "slug": "jus-maria-fraise-banane",
+   "nameFr": "Jus Maria fraise-banane avec morceaux de fruits",
+   "nameEn": "Maria strawberry-banana juice with fruit pieces",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 24 canettes",
+   "packEn": "Case of 24 cans",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8400,
+   "sectors": [
+    "ff",
+    "su",
+    "re"
+   ],
+   "origin": "Importé",
+   "vis": "ma-jus-fraise-banane"
+  },
+  {
+   "brand": "Maria",
+   "stock": 200,
+   "flag": "",
+   "allergens": [],
+   "halal": true,
+   "code": "MA-JC33",
+   "slug": "jus-maria-cocktail",
+   "nameFr": "Jus Maria cocktail avec morceaux de fruits",
+   "nameEn": "Maria cocktail juice with fruit pieces",
+   "universe": "boissons",
+   "sub": "jus",
+   "packFr": "Carton 24 canettes",
+   "packEn": "Case of 24 cans",
+   "upc": 24,
+   "cpp": 84,
+   "base": 8400,
+   "sectors": [
+    "ff",
+    "su",
+    "re"
+   ],
+   "origin": "Importé",
+   "vis": "ma-jus-cocktail"
   }
  ],
  "news": [

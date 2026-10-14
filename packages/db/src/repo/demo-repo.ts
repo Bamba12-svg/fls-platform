@@ -24,7 +24,11 @@ let seq = 1000;
 const id = (p: string) => `${p}_${(seq++).toString(36)}`;
 const now = () => new Date().toISOString();
 
+/** À incrémenter quand seed-data.json change : un état de démo plus ancien est alors reconstruit. */
+const SEED_VERSION = '2026-10-14-maria';
+
 interface State {
+  seedVersion?: string;
   settings: PricingSettings; grids: GridDTO[]; discounts: VolumeDiscount[]; universes: UniverseDTO[]; products: ProductDTO[]; posts: PostDTO[];
   staff: (StaffDTO & { passwordHash: string })[]; customers: (CustomerDTO & { passwordHash: string | null })[]; orders: OrderDTO[];
   baskets: { id: string; customerId: string; name: string; lines: { code: string; qty: number }[] }[]; leads: LeadDTO[]; media: MediaDTO[]; audit: AuditDTO[];
@@ -84,6 +88,7 @@ function build(): State {
   });
   const lead = (type: LeadDTO['type'], company: string, name: string, phone: string, city: string, message: string): LeadDTO => ({ id: id('l'), type, status: 'NEW', company, name, phone, email: null, city, message, payload: null, createdAt: now() });
   return {
+    seedVersion: SEED_VERSION,
     settings: { ...DEFAULT_SETTINGS, b2cEnabled: true }, discounts: [...DEFAULT_DISCOUNTS],
     grids: [{ segment: 'GROSSISTE', label: 'Grossiste', coefficient: 0.88 }, { segment: 'DEMI_GROSSISTE', label: 'Demi-grossiste / supérette', coefficient: 0.94 }, { segment: 'CHR', label: 'Restaurant / fast-food (CHR)', coefficient: 1 }, { segment: 'B2C', label: 'Grand public', coefficient: 1 }],
     universes, products, posts, staff, customers, orders, baskets, media: [], audit: [],
@@ -100,7 +105,11 @@ const FILE = process.env.DEMO_STATE_FILE || resolve(process.cwd(), '..', '..', '
 function sync() {
   try {
     const m = statSync(FILE).mtimeMs;
-    if (!g.__flsDemo || (g.__flsDemoAt ?? 0) < m) { g.__flsDemo = JSON.parse(readFileSync(FILE, 'utf8')) as State; g.__flsDemoAt = m; }
+    if (!g.__flsDemo || (g.__flsDemoAt ?? 0) < m) {
+      const saved = JSON.parse(readFileSync(FILE, 'utf8')) as State;
+      if (saved.seedVersion !== SEED_VERSION) { g.__flsDemo = build(); persist(); return; } // catalogue mis à jour : on repart des nouvelles données
+      g.__flsDemo = saved; g.__flsDemoAt = m;
+    }
   } catch { /* pas encore de fichier : état initial */ }
 }
 function persist() {

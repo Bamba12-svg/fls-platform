@@ -7,7 +7,8 @@ import { NewsCard } from '@/components/NewsCard';
 import { Ph } from '@/components/Photo';
 import { ProductCard } from '@/components/ProductCard';
 import { HeroSlideshow } from '@/components/home/Hero';
-import { MariaCarousel, PillarRail, ProfileTabs, QuickOrderDemo, UniversePanels, type Profile } from '@/components/home/HomeWidgets';
+import { PillarRail, ProfileTabs, QuickOrderDemo, type Profile } from '@/components/home/HomeWidgets';
+import { MariaShowcase } from '@/components/home/MariaShowcase';
 import { toPublic, UNIVERSE_ICON } from '@/lib/catalog';
 import { img } from '@/lib/content';
 import { alternates, pick, tr, type Locale } from '@/lib/i18n';
@@ -22,8 +23,6 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
   const flagged = all.filter((p) => p.isNew || p.isDeal);
   const featured = [...flagged, ...all.filter((p) => ['UL-033', 'RZ-BR50', 'HU-T20', 'SG-F09'].includes(p.code))].slice(0, 10).map(toPublic);
   const demo = all.filter((p) => ['UL-033', 'HU-T20', 'SG-F09', 'CO-MY5', 'RZ-BR50'].includes(p.code)).map(toPublic);
-  const panels = universes.map((u) => ({ href: L(`/univers/${u.slug}`), img: u.image, icon: UNIVERSE_ICON[u.slug] ?? 'box', title: pick(l, u.name), desc: pick(l, u.desc), value: u.volume.value, valueLabel: pick(l, u.volume.label) }))
-    .concat([{ href: L('/cles-en-main'), img: img('u-superette'), icon: 'store', title: t('Supérettes clés en main', 'Turnkey mini-markets'), desc: t('Nous concevons, aménageons et remplissons votre point de vente.', 'We design, fit out and stock your shop.'), value: '120+', valueLabel: t('supérettes approvisionnées', 'mini-markets supplied') }]);
   const profiles: Profile[] = [
     { k: 'gr', img: img('entrepot'), icon: 'pallet', title: t('Grossistes, demi-grossistes et supérettes', 'Wholesalers, semi-wholesalers and mini-markets'),
       desc: t('Achetez à la palette ou au carton avec une grille dégressive qui suit vos volumes. Votre commercial voit vos encours et anticipe vos ruptures.', 'Buy by the pallet or case with volume pricing that follows your quantities. Your sales rep sees your balance and anticipates stock-outs.'),
@@ -63,9 +62,8 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
         <QuickOrderDemo products={demo} />
       </div></section>
 
-      <section className="sn-sec" aria-labelledby="sn-uni-h"><div className="sn-wrap">
-        <div className="sn-sec-h"><div><span className="sn-eye">{t('Nos univers', 'Our ranges')}</span><h2 className="sn-h2" id="sn-uni-h">{t('Un seul fournisseur pour tout le rayon alimentaire', 'One supplier for the whole food aisle')}</h2></div><Link className="sn-link" href={L('/catalogue')}>{t('Voir tout le catalogue', 'See the full catalogue')}<Icon name="arrow" /></Link></div>
-        <UniversePanels items={panels} />
+      <section className="sn-sec sn-mx-sec" aria-labelledby="sn-maria-h"><div className="sn-wrap">
+        <MariaShowcase />
       </div></section>
 
       <section className="sn-sec sn-sec-alt" aria-labelledby="sn-prof-h"><div className="sn-wrap">
@@ -73,10 +71,6 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
         <ProfileTabs profiles={profiles} />
       </div></section>
 
-      <section className="sn-sec" aria-labelledby="sn-maria-h"><div className="sn-wrap">
-        <div className="sn-sec-h"><div><span className="sn-eye">{t('Marque exclusive', 'Exclusive brand')}</span><h2 className="sn-h2" id="sn-maria-h">{t('Maria, distribuée en exclusivité par FLS', 'Maria, distributed exclusively by FLS')}</h2><p className="sn-sub">{t('Conserves de légumes, olives, fruits au sirop et sauces : une gamme complète pour les rayons et les cuisines professionnelles.', 'Canned vegetables, olives, fruit in syrup and sauces: a full range for shop shelves and professional kitchens.')}</p></div><Link className="sn-link" href={L('/univers/conserves')}>{t('Voir la gamme Maria', 'See the Maria range')}<Icon name="arrow" /></Link></div>
-        <MariaCarousel />
-      </div></section>
 
       <section className="sn-sec sn-sec-alt" aria-labelledby="sn-feat-h"><div className="sn-wrap">
         <div className="sn-sec-h"><div><span className="sn-eye">{t('Arrivages et offres du mois', 'New arrivals and monthly deals')}</span><h2 className="sn-h2" id="sn-feat-h">{t('Ce qui part vite cette semaine', 'Moving fast this week')}</h2></div><Link className="sn-link" href={L('/catalogue')}>{t('Commander par code article', 'Order by item code')}<Icon name="arrow" /></Link></div>

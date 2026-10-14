@@ -31,7 +31,7 @@ pnpm dev
 - Site : http://localhost:3000
 - Back-office : http://localhost:3000/admin-fls
 
-En mode démo, les données (56 produits, 11 actualités, clients, commandes) sont chargées en mémoire et partagées entre le site et le back-office via `storage/demo-state.json`. Supprimez ce fichier pour repartir de zéro.
+En mode démo, les données (67 produits, 11 actualités, clients, commandes) sont chargées en mémoire et partagées entre le site et le back-office via `storage/demo-state.json`. Supprimez ce fichier pour repartir de zéro.
 
 ## Démarrage avec PostgreSQL (configuration de production)
 
@@ -71,7 +71,7 @@ pnpm dev
 
 ## Prix et visuels (provisoires)
 
-- **Prix** : les 56 prix de base (carton HT, grille restauration) sont calés sur les prix de marché observés à Dakar en 2025-2026 (riz brisé ordinaire homologué autour de 14 400 F le sac de 50 kg, sucre autour de 600 F le kg au détail). Ils se modifient produit par produit dans le back-office (Catalogue) et les coefficients par segment dans Tarifs.
+- **Prix** : les prix de base (carton HT, grille restauration) sont calés sur les prix de marché observés à Dakar en 2025-2026 (riz brisé ordinaire homologué autour de 14 400 F le sac de 50 kg, sucre autour de 600 F le kg au détail). Ils se modifient produit par produit dans le back-office (Catalogue) et les coefficients par segment dans Tarifs.
 - **Visuels** : 22 photos viennent de l’ancien fls.sn ; les 34 autres produits ont un packshot illustré provisoire (`apps/web/public/img/p/p-<code>.webp`). Pour les remplacer : Back-office > Médiathèque (téléverser la photo) puis Catalogue > produit > Packshot.
 
 ## Commandes utiles

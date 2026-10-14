@@ -96,3 +96,47 @@ export const sectorOf = (s: Segment | null | undefined): SectorKey => (s === 'GR
 export const SEGMENT_LABEL: Record<Segment, L> = {
   GROSSISTE: l('Grossiste', 'Wholesaler'), DEMI_GROSSISTE: l('Demi-grossiste', 'Semi-wholesaler'), CHR: l('Restauration (CHR)', 'Food service'), B2C: l('Particulier', 'Consumer'),
 };
+
+/** Gamme Maria telle que présentée dans la brochure FLS (juillet 2026) : 5 catégories, visuels détourés de la brochure. */
+export type MariaItem = { img: string; name: L; code: string; universe: string; slug: string };
+const mi = (img: string, fr: string, en: string, code: string, universe: string, slug: string): MariaItem => ({ img: `/img/maria/${img}.webp`, name: l(fr, en), code, universe, slug });
+export const MARIA_RANGE: { key: string; name: L; items: MariaItem[] }[] = [
+  { key: 'legumes', name: l('Conserves de légumes', 'Canned vegetables'), items: [
+    mi('petits-pois', 'Petits pois fins', 'Fine peas', 'CO-PP8', 'conserves', 'petits-pois-maria-4-4'),
+    mi('macedoine', 'Macédoine de légumes', 'Mixed vegetables', 'CO-MC8', 'conserves', 'macedoine-legumes-maria'),
+    mi('haricots-blancs', 'Haricots blancs', 'White beans', 'CO-HB8', 'conserves', 'haricots-blancs-maria'),
+    mi('mais-doux', 'Maïs doux', 'Sweet corn', 'CO-MD3', 'conserves', 'mais-doux-maria-3-1'),
+  ] },
+  { key: 'fruits', name: l('Conserves de fruits', 'Canned fruit'), items: [
+    mi('ananas-morceaux', 'Ananas en morceaux au sirop léger', 'Pineapple pieces in light syrup', 'CO-AN8', 'conserves', 'ananas-tranches-maria'),
+    mi('cocktail-fruits', 'Cocktail de fruits tropicaux', 'Tropical fruit cocktail', 'CO-FC8', 'conserves', 'cocktail-fruits-tropicaux-maria'),
+    mi('jus-ananas-boite', 'Jus d’ananas', 'Pineapple juice', 'CO-JA1', 'conserves', 'jus-ananas-maria-boite'),
+    mi('coco-pulpe', 'Coco avec pulpe', 'Coconut with pulp', 'CO-CC33', 'conserves', 'coco-avec-pulpe-maria-330ml'),
+  ] },
+  { key: 'sauces', name: l('Sauces', 'Sauces'), items: [
+    mi('mayonnaise', 'Mayonnaise', 'Mayonnaise', 'CO-MY5', 'conserves', 'mayonnaise-maria'),
+    mi('ketchup', 'Ketchup', 'Ketchup', 'CO-KE5', 'conserves', 'ketchup-maria-5kg'),
+    mi('moutarde', 'Moutarde', 'Mustard', 'CO-MO1', 'conserves', 'moutarde-maria'),
+    mi('vinaigre', 'Vinaigre coloré', 'Coloured vinegar', 'CO-VC15', 'conserves', 'vinaigre-colore-maria'),
+  ] },
+  { key: 'condiments', name: l('Condiments', 'Condiments'), items: [
+    mi('olives-entieres', 'Olives vertes entières', 'Whole green olives', 'CO-OE7', 'conserves', 'olives-vertes-entieres-maria'),
+    mi('olives-denoyautees', 'Olives vertes dénoyautées', 'Pitted green olives', 'CO-OL9', 'conserves', 'olives-vertes-maria'),
+    mi('cornichons', 'Cornichons extra-fins', 'Extra-fine gherkins', 'CO-CN35', 'conserves', 'cornichons-extra-fins-maria'),
+    mi('oignons-blancs', 'Petits oignons blancs', 'Small white onions', 'CO-OB36', 'conserves', 'petits-oignons-blancs-maria'),
+  ] },
+  { key: 'jus', name: l('Jus', 'Juices'), items: [
+    mi('jus-mangue', 'Mangue', 'Mango', 'MA-JM33', 'boissons', 'jus-maria-mangue'),
+    mi('jus-goyave', 'Goyave', 'Guava', 'MA-JG33', 'boissons', 'jus-maria-goyave'),
+    mi('jus-cocktail', 'Cocktail', 'Cocktail', 'MA-JC33', 'boissons', 'jus-maria-cocktail'),
+    mi('jus-fraise-banane', 'Fraise-banane', 'Strawberry-banana', 'MA-JF33', 'boissons', 'jus-maria-fraise-banane'),
+    mi('jus-ananas', 'Ananas', 'Pineapple', 'MA-JA33', 'boissons', 'jus-maria-ananas'),
+    mi('jus-orange', 'Orange', 'Orange', 'MA-JO33', 'boissons', 'jus-maria-orange'),
+  ] },
+];
+export const MARIA_PHOTOS: [string, L][] = [
+  ['/img/maria/l-haricots.webp', l('Haricots blancs Maria', 'Maria white beans')],
+  ['/img/maria/l-olives.webp', l('Olives vertes dénoyautées Maria', 'Maria pitted green olives')],
+  ['/img/maria/l-moutarde.webp', l('Moutarde Maria', 'Maria mustard')],
+  ['/img/maria/l-ananas.webp', l('Ananas en morceaux Maria', 'Maria pineapple pieces')],
+];
