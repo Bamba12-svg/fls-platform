@@ -43,7 +43,6 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
         <h1 id="sn-h1">{t('Toute l’alimentation de votre commerce, au prix pro.', 'Everything your food business stocks, at trade prices.')}</h1>
         <p className="sn-hero-lede">{t('Épicerie, boissons, frais et surgelés livrés depuis Dakar aux grossistes, supérettes et restaurants du Sénégal. Votre grille tarifaire, le stock réel et vos factures au même endroit.', 'Groceries, beverages, fresh and frozen food delivered from Dakar to wholesalers, mini-markets and restaurants across Senegal. Your price grid, live stock and invoices in one place.')}</p>
         <div className="sn-hero-cta"><Link className="sn-btn sn-btn-go" href={L('/contact')}>{t('Ouvrir un compte pro', 'Open a pro account')}</Link><Link className="sn-btn sn-btn-glass" href={L('/catalogue')}>{t('Voir le catalogue', 'See the catalogue')}</Link></div>
-        <p className="sn-hero-proof"><span><Icon name="truck" />{t('24 à 48 h à Dakar et Thiès', '24 to 48 h in Dakar and Thiès')}</span><span><Icon name="thermo" />{t('Froid 0–4 °C et −18 °C', 'Chilled 0–4 °C and −18 °C')}</span><span><Icon name="shield" />{t('Certificats halal fournis', 'Halal certificates provided')}</span></p>
       </HeroSlideshow>
       <PillarRail />
 
