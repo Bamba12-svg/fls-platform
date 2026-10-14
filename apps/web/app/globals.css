@@ -170,3 +170,20 @@
 .sn-mx-acc .sn-ph img{object-fit:cover}
 .sn-mx-names{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .sn-mx-names li{font-size:.84rem;font-weight:600;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(4px);padding:4px 10px;border-radius:999px}
+
+/* ===== Maria : produits qui défilent dans le panneau ouvert ===== */
+.sn-mx-acc .sn-acc-i{cursor:pointer}
+.sn-mx-sl{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.sn-mx-s{position:absolute;inset:0;opacity:0;transition:opacity .7s ease}
+.sn-mx-s.sn-on{opacity:1}
+.sn-mx-s-photo img{object-fit:cover}
+.sn-acc-i:not(.sn-act) .sn-mx-s-photo img{filter:saturate(.75) brightness(.85)}
+.sn-mx-s-pk{display:grid;place-items:start center;padding-top:7%;background:radial-gradient(70% 55% at 50% 35%,#ffffff 0%,#F4F1E4 55%,#E4E9DD 100%)}
+.sn-mx-s-pk img{height:58%;width:auto;max-width:78%;object-fit:contain;filter:drop-shadow(0 22px 22px rgba(16,36,26,.28));transform:scale(.92) translateY(10px);transition:transform 1.4s var(--sn-ease)}
+.sn-mx-s-pk.sn-on img{transform:none}
+.sn-mx-names button{font:inherit;font-size:.84rem;font-weight:600;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(4px);padding:4px 10px;border-radius:999px;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.sn-mx-names li{background:none!important;border:0!important;padding:0!important;backdrop-filter:none!important}
+.sn-mx-names button[aria-pressed="true"]{background:var(--sn-yellow);border-color:var(--sn-yellow);color:var(--sn-navy-9)}
+.sn-mx-names button:hover{background:rgba(255,255,255,.28)}
+.sn-acc-go{text-decoration:none}
+@media(max-width:720px){.sn-mx-s-pk img{height:50%}}
