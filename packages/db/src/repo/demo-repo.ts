@@ -25,7 +25,7 @@ const id = (p: string) => `${p}_${(seq++).toString(36)}`;
 const now = () => new Date().toISOString();
 
 /** À incrémenter quand seed-data.json change : un état de démo plus ancien est alors reconstruit. */
-const SEED_VERSION = '2026-10-14-logo';
+const SEED_VERSION = '2026-10-15-sans-serene';
 
 interface State {
   seedVersion?: string;

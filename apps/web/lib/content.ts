@@ -9,7 +9,7 @@ export const ALT: Record<string, L> = {
   dakar: l('Point de vente FLS', 'FLS point of sale'),
   hero: l('Bâtiment de la supérette clés en main de l’Armée', 'Turnkey mini-market building for the Armed Forces'),
   entrepot: l('Dépôt FLS et camion conteneur', 'FLS depot with a container truck'),
-  'u-boissons': l('Canettes de boissons Serene distribuées par FLS', 'Serene canned drinks distributed by FLS'),
+  'u-boissons': l('Jus Maria en canette distribués par FLS', 'Maria canned juices distributed by FLS'),
   'u-epicerie': l('Rayons d’épicerie approvisionnés par FLS', 'Grocery shelves stocked by FLS'),
   'u-frais': l('Espace produits FLS au salon FIDAK', 'FLS product space at the FIDAK fair'),
   'u-surgeles': l('Espace FLS au salon FIDAK', 'FLS space at the FIDAK fair'),
@@ -22,7 +22,8 @@ export const ALT: Record<string, L> = {
   'n-armee': l('Inauguration des supérettes clés en main de l’Armée sénégalaise', 'Opening of the turnkey mini-markets for the Senegalese Armed Forces'),
   'hero-1': l('Moutarde Maria et grillades', 'Maria mustard with grilled meat'),
   'f-sup-rayons': l('Rayons d’une supérette clés en main approvisionnée par FLS', 'Shelves of a turnkey mini-market stocked by FLS'),
-  'f-serene': l('Gamme de boissons Serene en canette', 'Serene canned drinks range'),
+  'f-maria-cuisine': l('La gamme Maria présentée en cuisine', 'The Maria range in the kitchen'),
+  'f-maria-jus': l('Gamme de jus Maria avec morceaux de fruits', 'Maria juices with fruit pieces'),
   'f-lancement': l('Équipes FLS lors du lancement', 'FLS teams at the launch'),
   'f-fidak': l('Stand FLS au salon FIDAK', 'FLS stand at the FIDAK fair'),
   'maria-1': l('Gamme Maria', 'Maria range'),
@@ -54,9 +55,9 @@ export const PILLARS = [
 
 export const SLIDES = [
   { img: 'f-sup-rayons', ic: 'store', l: l('Supérettes', 'Mini-markets') },
-  { img: 'hero-1', ic: 'jar', l: l('Maria', 'Maria') },
+  { img: 'hero-1', ic: 'jar', l: l('Sauces Maria', 'Maria sauces') },
   { img: 'f-lancement', ic: 'team', l: l('Nos équipes', 'Our teams') },
-  { img: 'f-serene', ic: 'can', l: l('Serene', 'Serene') },
+  { img: 'f-maria-cuisine', ic: 'jar', l: l('Gamme Maria', 'Maria range') },
   { img: 'n-fidak', ic: 'store', l: l('FIDAK', 'FIDAK') },
 ];
 

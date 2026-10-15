@@ -15,6 +15,6 @@ export const toPublic = (p: ProductDTO): PublicProduct => ({
 });
 
 /** Photo des rayons FLS utilisée pour les produits sans visuel (recadrage différent par produit). */
-export const SHELF: Record<string, string> = { boissons: '/img/f-serene-gamme.webp', epicerie: '/img/f-rayons2.webp', frais: '/img/f-sup-rayons.webp', surgeles: '/img/f-stand1.webp', conserves: '/img/f-sup-rayons.webp' };
+export const SHELF: Record<string, string> = { boissons: '/img/u-boissons.webp', epicerie: '/img/f-rayons2.webp', frais: '/img/f-sup-rayons.webp', surgeles: '/img/f-stand1.webp', conserves: '/img/f-sup-rayons.webp' };
 export const UNIVERSE_ICON: Record<string, string> = { boissons: 'bottle', epicerie: 'sack', frais: 'yog', surgeles: 'snow', conserves: 'tin' };
 export const productPath = (locale: string, p: { universe: string; slug: string }) => `/${locale}/categories/${p.universe}/${p.slug}`;

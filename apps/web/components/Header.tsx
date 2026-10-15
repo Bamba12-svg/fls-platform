@@ -95,9 +95,9 @@ export function Header({ universes }: { universes: NavUniverse[] }) {
           <div className="sn-mega-col"><h3><span className="sn-mega-dot"><Icon name="store" /></span><Link href={L('/cles-en-main')}>{t('Supérettes clés en main', 'Turnkey mini-markets')}</Link></h3>
             <ul><li><Link href={L('/cles-en-main')}>{t('Formats et aménagement', 'Formats and fit-out')}</Link></li><li><Link href={L('/cles-en-main')}>{t('Approvisionnement initial', 'Opening stock')}</Link></li></ul></div>
           <Link className="sn-mega-feat" href={L('/univers/boissons')} style={{ gridColumn: 4, gridRow: '1 / span 2' }}>
-            <Photo src="/img/f-serene.webp" icon="can" sizes="300px" />
+            <Photo src="/img/f-maria-jus.webp" icon="can" sizes="300px" />
             <span className="sn-flag sn-flag-new" style={{ alignSelf: 'flex-start' }}>{t('Arrivage', 'New arrival')}</span>
-            <h4>{t('Boissons Serene en canette', 'Serene canned drinks')}</h4><p>{t('Ananas, tropical : disponibles par carton de 24.', 'Pineapple, tropical: available in cases of 24.')}</p>
+            <h4>{t('Jus Maria en canette', 'Maria canned juices')}</h4><p>{t('Mangue, goyave, cocktail… avec de vrais morceaux de fruits.', 'Mango, guava, cocktail… with real fruit pieces.')}</p>
           </Link>
         </div>
       </div>

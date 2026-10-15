@@ -26,10 +26,6 @@
      1
     ],
     [
-     "Serene",
-     0
-    ],
-    [
      "Enjoy",
      0
     ],
@@ -507,56 +503,6 @@
    "halal": true,
    "origin": "Importé",
    "vis": "enjoy"
-  },
-  {
-   "code": "SR-AN33",
-   "slug": "serene-ananas-33cl",
-   "nameFr": "Boisson Serene ananas 33 cl",
-   "nameEn": "Serene pineapple drink 33 cl",
-   "brand": "Serene",
-   "universe": "boissons",
-   "sub": "jus",
-   "packFr": "Carton 24 × 33 cl canette",
-   "packEn": "Case 24 × 33 cl can",
-   "upc": 24,
-   "cpp": 84,
-   "base": 8100,
-   "stock": 350,
-   "flag": "new",
-   "sectors": [
-    "ff",
-    "su",
-    "re"
-   ],
-   "allergens": [],
-   "halal": true,
-   "origin": "Importé",
-   "vis": "serene"
-  },
-  {
-   "code": "SR-TR33",
-   "slug": "serene-tropical-33cl",
-   "nameFr": "Boisson Serene tropical 33 cl",
-   "nameEn": "Serene tropical drink 33 cl",
-   "brand": "Serene",
-   "universe": "boissons",
-   "sub": "jus",
-   "packFr": "Carton 24 × 33 cl canette",
-   "packEn": "Case 24 × 33 cl can",
-   "upc": 24,
-   "cpp": 84,
-   "base": 8100,
-   "stock": 190,
-   "flag": "",
-   "sectors": [
-    "ff",
-    "su",
-    "re"
-   ],
-   "allergens": [],
-   "halal": true,
-   "origin": "Importé",
-   "vis": "serene"
   },
   {
    "code": "EA-150",
@@ -2184,7 +2130,7 @@
   }
  },
  "shelf": {
-  "boissons": "f-serene-gamme",
+  "boissons": "u-boissons",
   "epicerie": "f-rayons2",
   "frais": "f-sup-rayons",
   "surgeles": "f-stand1",

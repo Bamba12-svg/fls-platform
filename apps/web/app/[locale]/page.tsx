@@ -14,7 +14,7 @@ import { img } from '@/lib/content';
 import { alternates, pick, tr, type Locale } from '@/lib/i18n';
 
 export const revalidate = 300;
-const FEATURED = ['MA-JM33', 'UL-033', 'CO-MY5', 'SR-AN33', 'CO-PP8', 'EJ-JM1', 'CO-OL9', 'MA-JF33', 'UL-O33', 'CO-KE5', 'CO-FC8', 'SR-TR33', 'CO-CN35', 'MA-JC33'];
+const FEATURED = ['MA-JM33', 'UL-033', 'CO-MY5', 'MA-JG33', 'CO-PP8', 'EJ-JM1', 'CO-OL9', 'MA-JF33', 'UL-O33', 'CO-KE5', 'CO-FC8', 'MA-JO33', 'CO-CN35', 'MA-JC33'];
 
 export const generateMetadata = ({ params }: { params: { locale: Locale } }): Metadata => ({ alternates: alternates(params.locale) });
 
@@ -22,7 +22,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
   const l = params.locale; const t = tr(l); const L = (p: string) => `/${l}${p}`;
   const repo = await getRepo();
   const [universes, all, posts] = await Promise.all([repo.universes(), repo.products(), repo.posts({ home: true })]);
-  // Uniquement des produits réellement distribués par FLS (gamme Maria, Uludag, Serene, Enjoy).
+  // Uniquement des produits réellement distribués par FLS (gamme Maria, Uludag, Enjoy).
   const featured = FEATURED.map((c) => all.find((p) => p.code === c)).filter((p): p is NonNullable<typeof p> => Boolean(p)).map(toPublic);
   const demo = all.filter((p) => ['UL-033', 'HU-T20', 'SG-F09', 'CO-MY5', 'RZ-BR50'].includes(p.code)).map(toPublic);
   const profiles: Profile[] = [
