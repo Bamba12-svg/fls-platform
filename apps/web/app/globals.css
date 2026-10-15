@@ -265,3 +265,15 @@
 .sn-net-tip svg{width:15px;height:15px;flex:none}
 @media(max-width:720px){.sn-net-tip{display:none}}
 .sn-net-card p svg{width:18px;height:18px;flex:none}
+
+/* ===== « Ce qui part vite » : bandeau de produits qui défile ===== */
+.sn-feat-mq{overflow:hidden;margin-inline:calc(var(--sn-gut) * -1);padding:8px 0 18px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.sn-feat-track{display:flex;gap:20px;width:max-content;animation:sn-feat-scroll 70s linear infinite}
+.sn-feat-copy{display:contents}
+.sn-feat-mq:hover .sn-feat-track,.sn-feat-mq:focus-within .sn-feat-track{animation-play-state:paused}
+.sn-feat-track .sn-card{width:clamp(230px,22vw,280px);flex:none;transition:transform .35s var(--sn-ease),box-shadow .35s}
+.sn-feat-track .sn-card:hover{transform:translateY(-6px);box-shadow:var(--sn-sh2)}
+.sn-feat-track .sn-card .sn-pk img,.sn-feat-track .sn-card img{transition:transform .5s var(--sn-ease)}
+.sn-feat-track .sn-card:hover img{transform:scale(1.06)}
+@keyframes sn-feat-scroll{to{transform:translateX(calc(-50% - 10px))}}
+@media (prefers-reduced-motion:reduce){.sn-feat-track{animation:none}.sn-feat-mq{overflow-x:auto}.sn-feat-copy{display:none}}

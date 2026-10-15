@@ -9,9 +9,9 @@ import { useCart, useLocale, useMoney, usePricing, useT, useUI, type CatalogItem
 const hashN = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 
 /** Visuel produit : packshot FLS, sinon photo des rayons FLS recadrée. */
-export function PackThumb({ item, size, ratio }: { item: CatalogItem; size?: number; ratio?: boolean }) {
+export function PackThumb({ item, size, ratio, eager }: { item: CatalogItem; size?: number; ratio?: boolean; eager?: boolean }) {
   const style = size ? { width: size, height: size, borderRadius: size > 50 ? 10 : 8, flex: 'none' as const } : undefined;
-  if (item.image) return <div className="sn-pk sn-pk-ph" data-c={item.universe} style={style}><Image src={item.image} alt="" width={size ? size * 2 : 640} height={size ? size * 2 : 480} sizes={size ? `${size}px` : '(max-width:720px) 50vw, 280px'} style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>;
+  if (item.image) return <div className="sn-pk sn-pk-ph" data-c={item.universe} style={style}><Image src={item.image} alt="" loading={eager ? "eager" : undefined} width={size ? size * 2 : 640} height={size ? size * 2 : 480} sizes={size ? `${size}px` : '(max-width:720px) 50vw, 280px'} style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>;
   const shelf = SHELF[item.universe]; const h = hashN(item.code);
   if (shelf) return <div className="sn-pk sn-pk-ph sn-pk-shelf" data-c={item.universe} style={style}><Image src={shelf} alt="" width={size ? size * 2 : 640} height={size ? size * 2 : 480} sizes={size ? `${size}px` : '280px'} style={{ width: '100%', height: '100%', objectFit: 'cover', transformOrigin: `${10 + (h % 80)}% ${35 + ((h >> 7) % 40)}%` }} /></div>;
   return <div className="sn-pk" data-c={item.universe} style={style}><Icon name="box" /></div>;
@@ -41,12 +41,12 @@ export function useAddToCart() {
   };
 }
 
-export function ProductCard({ p }: { p: PublicProduct }) {
+export function ProductCard({ p, eager }: { p: PublicProduct; eager?: boolean }) {
   const t = useT(); const l = useLocale(); const ui = useUI(); const addToCart = useAddToCart(); const { logged } = usePricing();
   return (
     <article className="sn-card">
       <div style={{ position: 'relative' }}>
-        <Link href={productPath(l, p)} tabIndex={-1} aria-hidden="true"><PackThumb item={p} /></Link>
+        <Link href={productPath(l, p)} tabIndex={-1} aria-hidden="true"><PackThumb item={p} eager={eager} /></Link>
         <div className="sn-flags">
           {p.isNew && <span className="sn-flag sn-flag-new">{t('Nouveau', 'New')}</span>}
           {p.isDeal && <span className="sn-flag sn-flag-deal">{t('Offre du mois', 'Deal of the month')}</span>}

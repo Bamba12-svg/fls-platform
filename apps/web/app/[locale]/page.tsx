@@ -14,14 +14,16 @@ import { img } from '@/lib/content';
 import { alternates, pick, tr, type Locale } from '@/lib/i18n';
 
 export const revalidate = 300;
+const FEATURED = ['MA-JM33', 'UL-033', 'CO-MY5', 'SR-AN33', 'CO-PP8', 'EJ-JM1', 'CO-OL9', 'MA-JF33', 'UL-O33', 'CO-KE5', 'CO-FC8', 'SR-TR33', 'CO-CN35', 'MA-JC33'];
+
 export const generateMetadata = ({ params }: { params: { locale: Locale } }): Metadata => ({ alternates: alternates(params.locale) });
 
 export default async function Home({ params }: { params: { locale: Locale } }) {
   const l = params.locale; const t = tr(l); const L = (p: string) => `/${l}${p}`;
   const repo = await getRepo();
   const [universes, all, posts] = await Promise.all([repo.universes(), repo.products(), repo.posts({ home: true })]);
-  const flagged = all.filter((p) => p.isNew || p.isDeal);
-  const featured = [...flagged, ...all.filter((p) => ['UL-033', 'RZ-BR50', 'HU-T20', 'SG-F09'].includes(p.code))].slice(0, 10).map(toPublic);
+  // Uniquement des produits réellement distribués par FLS (gamme Maria, Uludag, Serene, Enjoy).
+  const featured = FEATURED.map((c) => all.find((p) => p.code === c)).filter((p): p is NonNullable<typeof p> => Boolean(p)).map(toPublic);
   const demo = all.filter((p) => ['UL-033', 'HU-T20', 'SG-F09', 'CO-MY5', 'RZ-BR50'].includes(p.code)).map(toPublic);
   const profiles: Profile[] = [
     { k: 'gr', img: img('entrepot'), icon: 'pallet', title: t('Grossistes, demi-grossistes et supérettes', 'Wholesalers, semi-wholesalers and mini-markets'),
@@ -73,7 +75,12 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
 
       <section className="sn-sec sn-sec-alt" aria-labelledby="sn-feat-h"><div className="sn-wrap">
         <div className="sn-sec-h"><div><span className="sn-eye">{t('Arrivages et offres du mois', 'New arrivals and monthly deals')}</span><h2 className="sn-h2" id="sn-feat-h">{t('Ce qui part vite cette semaine', 'Moving fast this week')}</h2></div><Link className="sn-link" href={L('/catalogue')}>{t('Commander par code article', 'Order by item code')}<Icon name="arrow" /></Link></div>
-        <div className="sn-row-scroll">{featured.map((p) => <ProductCard key={p.code} p={p} />)}</div>
+        <div className="sn-feat-mq" aria-label={t('Produits mis en avant', 'Featured products')}>
+          <div className="sn-feat-track">
+            {featured.map((p) => <ProductCard key={p.code} p={p} eager />)}
+            <div className="sn-feat-copy" aria-hidden="true" {...({ inert: '' } as unknown as { inert: boolean })}>{featured.map((p) => <ProductCard key={`d-${p.code}`} p={p} eager />)}</div>
+          </div>
+        </div>
       </div></section>
 
       <section className="sn-turn sn-sec" aria-labelledby="sn-turn-h"><div className="sn-wrap sn-turn-in">
