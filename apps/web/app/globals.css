@@ -277,3 +277,38 @@
 .sn-feat-track .sn-card:hover img{transform:scale(1.06)}
 @keyframes sn-feat-scroll{to{transform:translateX(calc(-50% - 10px))}}
 @media (prefers-reduced-motion:reduce){.sn-feat-track{animation:none}.sn-feat-mq{overflow-x:auto}.sn-feat-copy{display:none}}
+
+/* ===== Frise chronologique animée ===== */
+.sn-tl-anim .sn-tl-track::before{transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.6,.1,.2,1)}
+.sn-tl-anim.sn-in .sn-tl-track::before{transform:none}
+.sn-tl-fill{position:absolute;left:0;top:54px;height:3px;margin-top:-.5px;background:linear-gradient(90deg,var(--sn-green),#0b8a52);border-radius:3px;z-index:0;transition:width .9s cubic-bezier(.6,.1,.2,1);box-shadow:0 0 10px rgba(9,118,70,.35)}
+.sn-tl-anim:not(.sn-in) .sn-tl-fill{width:0!important}
+.sn-tl-anim .sn-tl-y{opacity:0;transform:translateY(14px)}
+.sn-tl-anim.sn-in .sn-tl-y{animation:sn-tl-in .6s var(--sn-ease) forwards;animation-delay:calc(.35s + var(--k) * .14s)}
+@keyframes sn-tl-in{to{opacity:1;transform:none}}
+.sn-tl-anim .sn-tl-y i{transition:border-color .3s,background .3s,transform .4s cubic-bezier(.3,1.6,.5,1)}
+.sn-tl-anim .sn-tl-y.sn-past i{border-color:var(--sn-green);background:#fff}
+.sn-tl-anim .sn-tl-y.sn-past b{color:var(--sn-ink)}
+.sn-tl-anim .sn-tl-y[aria-selected="true"] i{transform:scale(1.35);box-shadow:0 0 0 0 rgba(9,118,70,.5);animation:sn-tl-ping 1.8s ease-out infinite}
+.sn-tl-anim .sn-tl-y[aria-selected="true"] b{color:var(--sn-green)}
+.sn-tl-anim .sn-tl-y:hover b{color:var(--sn-navy-9)}
+@keyframes sn-tl-ping{0%{box-shadow:0 0 0 0 rgba(9,118,70,.45)}80%,100%{box-shadow:0 0 0 12px rgba(9,118,70,0)}}
+/* panneau */
+.sn-tl-anim .sn-tl-panel{overflow:hidden}
+.sn-tl-anim .sn-tl-media{overflow:hidden;border-radius:var(--sn-r2);animation:sn-tl-wipe .9s cubic-bezier(.6,.1,.2,1) both}
+.sn-tl-anim .sn-tl-media .sn-ph img{animation:sn-tl-zoom 6s ease-out both}
+.sn-tl-anim .sn-tl-txt > *{animation:sn-tl-up .6s var(--sn-ease) both}
+.sn-tl-anim .sn-tl-txt > :nth-child(2){animation-delay:.1s}
+.sn-tl-anim .sn-tl-txt > :nth-child(3){animation-delay:.2s}
+.sn-tl-anim .sn-tl-txt > :nth-child(4){animation-delay:.3s}
+@keyframes sn-tl-wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes sn-tl-zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+@keyframes sn-tl-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+/* barre de progression jusqu'à l'étape suivante */
+.sn-tl-nav{align-items:center}
+.sn-tl-prog{flex:1;max-width:180px;height:4px;border-radius:4px;background:var(--sn-line);overflow:hidden;margin-left:8px}
+.sn-tl-prog i{display:block;height:100%;width:100%;background:var(--sn-yellow);transform-origin:left;transform:scaleX(0);animation:sn-tl-prog 5s linear forwards}
+.sn-tl-anim:not(.sn-in) .sn-tl-prog i,.sn-tl-anim.sn-hold .sn-tl-prog i{animation-play-state:paused}
+@keyframes sn-tl-prog{to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){.sn-tl-anim .sn-tl-y,.sn-tl-anim .sn-tl-media,.sn-tl-anim .sn-tl-txt>*,.sn-tl-anim .sn-tl-media img{animation:none!important;opacity:1;transform:none;clip-path:none}.sn-tl-anim .sn-tl-track::before{transform:none}.sn-tl-prog{display:none}}
+.sn-tl-anim .sn-tl-track{padding-left:6px}
