@@ -194,3 +194,74 @@
 .sn-dot i{height:5px;margin-bottom:12px}
 @media(max-width:720px){.sn-dot{font-size:.8rem}.sn-dots{gap:10px}}
 
+
+/* ===== Carte animée du réseau (Sénégal) ===== */
+.sn-net{position:relative;border-radius:var(--sn-r3);overflow:hidden;padding:18px 18px 14px;background:radial-gradient(120% 90% at 20% 30%,#123a27 0%,#0b2418 55%,#081a11 100%);box-shadow:0 30px 60px -30px rgba(8,26,17,.6),inset 0 0 0 1px rgba(255,255,255,.06)}
+.sn-net svg{display:block;width:100%;height:auto;overflow:visible}
+.sn-net-nb{fill:rgba(255,255,255,.025);stroke:rgba(255,255,255,.1);stroke-width:1}
+.sn-net-sea{fill:rgba(255,255,255,.35);font:italic 600 12px var(--sn-f);letter-spacing:.08em}
+.sn-net-cty{fill:rgba(255,255,255,.22);font:700 11px var(--sn-f);letter-spacing:.24em}
+.sn-net-cty-gm{fill:rgba(255,255,255,.4);font-size:9px;letter-spacing:.18em}
+.sn-net-land{opacity:0;transition:opacity 1.2s ease .9s}
+.sn-net-edge{fill:none;stroke:#d5cb30;stroke-width:1.6;stroke-opacity:.75;stroke-dasharray:1;stroke-dashoffset:1;stroke-linejoin:round}
+.sn-net-gm{fill:#0b2418;stroke:rgba(213,203,48,.45);stroke-width:1;opacity:0;transition:opacity .8s ease 1.4s}
+.sn-net.sn-in .sn-net-land{opacity:1}
+.sn-net.sn-in .sn-net-gm{opacity:1}
+.sn-net.sn-in .sn-net-edge{animation:sn-net-draw 2s cubic-bezier(.6,.1,.2,1) forwards}
+@keyframes sn-net-draw{to{stroke-dashoffset:0}}
+/* routes */
+.sn-net-line{fill:none;stroke:#d5cb30;stroke-width:1.4;stroke-opacity:.5;stroke-dasharray:1;stroke-dashoffset:1;stroke-linecap:round}
+.sn-net.sn-in .sn-net-line{animation:sn-net-draw 1.1s ease-out forwards;animation-delay:calc(1.3s + var(--i) * .12s)}
+.sn-net-flow{fill:none;stroke:#fff;stroke-width:1.2;stroke-opacity:0;stroke-dasharray:2 9;stroke-linecap:round}
+.sn-net.sn-in .sn-net-flow{animation:sn-net-flow 1.2s linear infinite;transition:stroke-opacity .4s}
+.sn-net-rt.sn-on .sn-net-line{stroke-opacity:1;stroke-width:2.6}
+.sn-net-rt.sn-on .sn-net-flow{stroke-opacity:.85}
+.sn-net-rt.sn-ond .sn-net-line{stroke-opacity:.3}
+@keyframes sn-net-flow{to{stroke-dashoffset:-11}}
+.sn-net-truck{fill:#fff;filter:drop-shadow(0 0 4px #d5cb30)}
+.sn-net-rt.sn-on .sn-net-truck{fill:#d5cb30}
+/* villes */
+.sn-net-city{cursor:pointer;outline:none}
+.sn-net-pop{opacity:0;transform:scale(.2)}
+.sn-net.sn-in .sn-net-pop{animation:sn-net-pop .6s cubic-bezier(.3,1.6,.5,1) forwards;animation-delay:calc(1.9s + var(--i) * .12s)}
+.sn-net.sn-in .sn-hub .sn-net-pop{animation-delay:.6s}
+@keyframes sn-net-pop{to{opacity:1;transform:none}}
+.sn-net-dot{fill:#d5cb30;stroke:#0b2418;stroke-width:2;transition:r .3s}
+.sn-net-city.sn-ond .sn-net-dot{fill:#0b2418;stroke:#d5cb30;stroke-dasharray:3 2}
+.sn-net-city.sn-hub .sn-net-dot{fill:#097646;stroke:#fdfefe;stroke-width:3}
+.sn-net-halo{opacity:.45;transition:opacity .3s}
+.sn-net-ring{fill:none;stroke:#d5cb30;stroke-width:1.5;opacity:0}
+.sn-net-city.sn-hub .sn-net-ring{stroke:#fdfefe;animation:sn-net-ping 2.2s ease-out infinite}
+.sn-net-city.sn-on .sn-net-ring{animation:sn-net-ping 1.6s ease-out infinite}
+.sn-net-city.sn-on .sn-net-halo{opacity:1}
+@keyframes sn-net-ping{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(3.4)}}
+.sn-net-lbl{fill:rgba(255,255,255,.88);font:600 14px var(--sn-f);paint-order:stroke;stroke:#0b2418;stroke-width:3px;transition:fill .3s}
+.sn-net-city.sn-hub .sn-net-lbl{font-weight:800;font-size:16px;fill:#fff}
+.sn-net-city.sn-on .sn-net-lbl{fill:#d5cb30;font-weight:800}
+.sn-net-city:focus-visible .sn-net-dot{stroke:#fff;stroke-width:3}
+/* bulle (carte HTML posée sur la carte) */
+.sn-net-tip{position:absolute;right:22px;top:22px;display:grid;gap:3px;padding:12px 16px;border-radius:14px;background:rgba(253,254,254,.96);box-shadow:0 14px 30px -12px rgba(0,0,0,.5);animation:sn-net-tip .35s ease-out;max-width:72%}
+.sn-net-tip b{color:#10241A;font-size:1rem}
+.sn-net-tip span{display:flex;gap:6px;align-items:center;color:#097646;font-weight:600;font-size:.84rem}
+@keyframes sn-net-tip{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sn-net:not(.sn-in) .sn-net-tip{opacity:0}
+/* légende et colonne d'infos */
+.sn-net-leg{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px;font-size:.8rem;color:rgba(255,255,255,.75)}
+.sn-net-leg span{display:inline-flex;align-items:center;gap:7px}
+.sn-net-leg i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.sn-l-hub{background:#097646;box-shadow:0 0 0 2px #fdfefe}
+.sn-l-city{background:#d5cb30}
+.sn-l-ond{border:2px dashed #d5cb30}
+.sn-l-truck{background:#fff;box-shadow:0 0 6px #d5cb30;width:8px!important;height:8px!important}
+.sn-net-card .sn-net-k{font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--sn-green)}
+.sn-net-card h3{margin:4px 0 6px;font-size:1.5rem}
+.sn-net-card p{display:flex;gap:8px;align-items:center;color:var(--sn-muted);margin:0}
+.sn-net-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.sn-net-stats div{background:var(--sn-bg2);border-radius:var(--sn-r2);padding:14px 16px}
+.sn-net-stats b{display:block;font-size:1.35rem;color:var(--sn-green);font-family:var(--sn-fn)}
+.sn-net-stats span{font-size:.8rem;color:var(--sn-muted)}
+@media (prefers-reduced-motion:reduce){.sn-net-edge,.sn-net-line{stroke-dashoffset:0!important;animation:none!important}.sn-net-land,.sn-net-gm,.sn-net-pop{opacity:1!important;transform:none!important;animation:none!important}.sn-net-truck,.sn-net-ring{display:none}.sn-net-flow{animation:none!important}}
+@media(max-width:560px){.sn-net{padding:10px}.sn-net-lbl{font-size:17px}.sn-net-tip{left:10px;top:10px;padding:8px 12px}.sn-net-tip b{font-size:.9rem}.sn-net-stats{grid-template-columns:1fr 1fr 1fr}.sn-net-stats b{font-size:1.05rem}}
+.sn-net-tip svg{width:15px;height:15px;flex:none}
+@media(max-width:720px){.sn-net-tip{display:none}}
+.sn-net-card p svg{width:18px;height:18px;flex:none}
