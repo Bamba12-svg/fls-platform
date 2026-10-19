@@ -1,6 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
+import { PRODUCT_MENU } from '@/lib/content';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { useSession } from 'next-auth/react';
@@ -86,14 +88,12 @@ export function Header({ universes }: { universes: NavUniverse[] }) {
       </div>
       <div className={`sn-mega ${menu === 'prod' ? 'sn-open' : ''}`} id="sn-mega" role="region" aria-label={t('Univers produits', 'Product ranges')} onMouseEnter={() => hoverMenu('prod')}>
         <div className="sn-wrap sn-mega-in">
-          {universes.map((u) => (
-            <div className="sn-mega-col" key={u.slug}>
-              <h3><span className="sn-mega-dot"><Icon name={u.icon} /></span><Link href={L(`/univers/${u.slug}`)}>{l === 'en' ? u.name.en : u.name.fr}</Link></h3>
-              <ul>{u.subs.map((s) => <li key={s.slug}><Link href={L(`/univers/${u.slug}?famille=${s.slug}`)}>{l === 'en' ? s.name.en : s.name.fr}</Link></li>)}</ul>
+          {PRODUCT_MENU.map((g) => (
+            <div className="sn-mega-col" key={g.key}>
+              <h3><span className="sn-mega-dot sn-mega-thumb"><Image src={g.thumb} alt="" width={40} height={40} /></span><Link href={L(`/${g.href}`)}>{g.name[l]}</Link></h3>
+              <ul>{g.items.map((it) => <li key={it.href}><Link href={L(`/${it.href}`)}>{it.name[l]}</Link></li>)}</ul>
             </div>
           ))}
-          <div className="sn-mega-col"><h3><span className="sn-mega-dot"><Icon name="store" /></span><Link href={L('/cles-en-main')}>{t('Supérettes clés en main', 'Turnkey mini-markets')}</Link></h3>
-            <ul><li><Link href={L('/cles-en-main')}>{t('Formats et aménagement', 'Formats and fit-out')}</Link></li><li><Link href={L('/cles-en-main')}>{t('Approvisionnement initial', 'Opening stock')}</Link></li></ul></div>
           <Link className="sn-mega-feat" href={L('/univers/boissons')} style={{ gridColumn: 4, gridRow: '1 / span 2' }}>
             <Photo src="/img/f-maria-jus.webp" icon="can" sizes="300px" />
             <span className="sn-flag sn-flag-new" style={{ alignSelf: 'flex-start' }}>{t('Arrivage', 'New arrival')}</span>
@@ -140,7 +140,7 @@ export function MobileNav({ universes }: { universes: NavUniverse[] }) {
           <li><Link href={L('/societe/qualite')}>{t('Qualité & hygiène', 'Quality & hygiene')}</Link></li>
           <li><Link href={L('/societe/histoire')}>{t('Notre histoire', 'Our history')}</Link></li></ul></details>
         <details open><summary>{t('Produits', 'Products')}<Icon name="chev" /></summary><ul>
-          {universes.map((u) => <li key={u.slug}><Link href={L(`/univers/${u.slug}`)}>{l === 'en' ? u.name.en : u.name.fr}</Link></li>)}
+          {PRODUCT_MENU.map((g) => <li key={g.key}><Link href={L(`/${g.href}`)}>{g.name[l]}</Link></li>)}
           <li><Link href={L('/cles-en-main')}>{t('Supérettes clés en main', 'Turnkey mini-markets')}</Link></li></ul></details>
         <details><summary>Services<Icon name="chev" /></summary><ul>
           <li><Link href={L('/conseil')}>{t('Conseil & assistance métier', 'Business advice & support')}</Link></li>
@@ -164,7 +164,7 @@ export function TabBar() {
   return (
     <nav className="sn-tabbar" aria-label={t('Navigation mobile', 'Mobile navigation')}>
       <Link href={L('')} aria-current={cur('', true)}><Icon name="home" /><span>{t('Accueil', 'Home')}</span></Link>
-      <Link href={L('/univers/epicerie')} aria-current={cur('/univers')}><Icon name="grid" /><span>{t('Produits', 'Products')}</span></Link>
+      <Link href={L('/univers/conserves')} aria-current={cur('/univers')}><Icon name="grid" /><span>{t('Produits', 'Products')}</span></Link>
       <Link href={L('/catalogue#recherche')} className="sn-tb-main"><i><Icon name="bolt" /></i><span>{t('Commande', 'Order')}</span></Link>
       <Link href={L('/compte')} aria-current={cur('/compte')}><Icon name="user" /><span>{t('Compte', 'Account')}</span></Link>
       <button type="button" onClick={() => ui.open('cart')}><Icon name="cart" /><span>{t('Panier', 'Cart')}</span>{lines.length > 0 && <span className="sn-count">{lines.length}</span>}</button>

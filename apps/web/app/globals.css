@@ -312,3 +312,4 @@
 @keyframes sn-tl-prog{to{transform:scaleX(1)}}
 @media (prefers-reduced-motion:reduce){.sn-tl-anim .sn-tl-y,.sn-tl-anim .sn-tl-media,.sn-tl-anim .sn-tl-txt>*,.sn-tl-anim .sn-tl-media img{animation:none!important;opacity:1;transform:none;clip-path:none}.sn-tl-anim .sn-tl-track::before{transform:none}.sn-tl-prog{display:none}}
 .sn-tl-anim .sn-tl-track{padding-left:6px}
+.sn-mega-thumb{width:34px;height:34px;background:#fff;padding:2px}.sn-mega-thumb img{width:100%;height:100%;object-fit:contain}

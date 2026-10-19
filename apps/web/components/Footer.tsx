@@ -1,3 +1,4 @@
+import { PRODUCT_MENU } from '@/lib/content';
 import Link from 'next/link';
 import type { UniverseDTO } from '@fls/db';
 import { pick, tr, type Locale } from '@/lib/i18n';
@@ -21,7 +22,7 @@ export function Footer({ locale, universes }: { locale: Locale; universes: Unive
             <li><Link href={L('/societe/qualite')}>{t('Qualité & hygiène', 'Quality & hygiene')}</Link></li>
             <li><Link href={L('/actualites')}>{t('Actualités', 'News')}</Link></li>
             <li><Link href={L('/contact?type=candidature')}>{t('Recrutement', 'Careers')}</Link></li></ul></div>
-          <div><h4>{t('Produits', 'Products')}</h4><ul>{universes.map((u) => <li key={u.slug}><Link href={L(`/univers/${u.slug}`)}>{pick(locale, u.name)}</Link></li>)}</ul></div>
+          <div><h4>{t('Produits', 'Products')}</h4><ul>{PRODUCT_MENU.map((g) => <li key={g.key}><Link href={L(`/${g.href}`)}>{g.name[locale]}</Link></li>)}</ul></div>
           <div><h4>Services</h4><ul>
             <li><Link href={L('/catalogue')}>{t('Commande pro en ligne', 'Online pro ordering')}</Link></li>
             <li><Link href={L('/conseil')}>{t('Conseil métier', 'Business advice')}</Link></li>

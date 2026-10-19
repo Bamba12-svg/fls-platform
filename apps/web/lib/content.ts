@@ -141,3 +141,20 @@ export const MARIA_PHOTOS: [string, L][] = [
   ['/img/maria/l-moutarde.webp', l('Moutarde Maria', 'Maria mustard')],
   ['/img/maria/l-ananas.webp', l('Ananas en morceaux Maria', 'Maria pineapple pieces')],
 ];
+
+/** Méga-menu Produits : uniquement les produits réellement distribués par FLS (brochure 2026 + marques partenaires). */
+export type MenuGroup = { key: string; name: L; href: string; thumb: string; items: { name: L; href: string }[] };
+export const PRODUCT_MENU: MenuGroup[] = [
+  ...MARIA_RANGE.map((c) => ({
+    key: c.key, name: c.key === 'jus' ? l('Jus Maria', 'Maria juices') : c.name, href: c.href, thumb: c.items[0]!.img,
+    items: c.items.map((it) => ({ name: c.key === 'jus' ? l(`Jus ${it.name.fr.toLowerCase()}`, `${it.name.en} juice`) : it.name, href: `categories/${it.universe}/${it.slug}` })),
+  })),
+  { key: 'partenaires', name: l('Boissons Uludag & Enjoy', 'Uludag & Enjoy drinks'), href: 'univers/boissons', thumb: '/img/p/p-uludag.webp', items: [
+    { name: l('Uludag Gazoz', 'Uludag Gazoz'), href: 'categories/boissons/uludag-gazoz-33cl' },
+    { name: l('Uludag Orange', 'Uludag Orange'), href: 'categories/boissons/uludag-orange-33cl' },
+    { name: l('Uludag Cola', 'Uludag Cola'), href: 'categories/boissons/uludag-cola-33cl' },
+    { name: l('Jus d’orange Enjoy', 'Enjoy orange juice'), href: 'categories/boissons/jus-orange-enjoy' },
+    { name: l('Nectar de mangue Enjoy', 'Enjoy mango nectar'), href: 'categories/boissons/nectar-mangue-enjoy' },
+    { name: l('Jus d’ananas Enjoy', 'Enjoy pineapple juice'), href: 'categories/boissons/jus-ananas-enjoy-20cl' },
+  ] },
+];
