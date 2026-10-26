@@ -31,7 +31,7 @@ export function Footer({ locale, universes }: { locale: Locale; universes: Unive
           <div><h4>{t('Lettre commerciale', 'Trade newsletter')}</h4><p style={{ fontSize: '.88rem' }}>{t('Arrivages, offres du mois et nouvelles gammes, une fois par semaine.', 'New arrivals, monthly deals and new ranges, once a week.')}</p><NewsletterForm /></div>
         </div>
         <div className="sn-foot-b">
-          <div className="sn-group"><span>{t('Groupe COSEMAD', 'COSEMAD Group')}</span> Carrefour Médical · CMI · SONERCO · FLS · SAINIMMO</div>
+          <div className="sn-group"><span>{t('GROUPE COSEMAD', 'COSEMAD GROUP')}</span> CARREFOUR MÉDICAL · CMI · SONERCO · FLS · SAINIMMO</div>
           <div>© {new Date().getFullYear()} FLS · {t('Mentions légales', 'Legal notice')} · {t('Confidentialité', 'Privacy')}</div>
         </div>
       </div>
